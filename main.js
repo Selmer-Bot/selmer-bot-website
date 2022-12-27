@@ -610,6 +610,10 @@ app.get("/downloads/*", async (req, res) => {
 });
 
 
+app.get("/invite", async (req, res) => {
+	return res.redirect("https://discord.com/oauth2/authorize?client_id=944046902415093760&scope=applications.commands+bot&permissions=549755289087");
+});
+
 app.get('/', async ({ query }, response) => {
 	const { code } = query;
 
