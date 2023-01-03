@@ -38,7 +38,7 @@ body::-webkit-scrollbar-thumb {
 /* header portion */
 .main-header {
     margin: 0 auto;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.7);
     height: 100px;
     width: 100%;
     z-index: 12;
@@ -48,6 +48,10 @@ body::-webkit-scrollbar-thumb {
 
 header {
     text-align: center;
+}
+
+.is-scrolling {
+    visibility: hidden;
 }
 
 .brand-name {
@@ -98,7 +102,7 @@ header {
     width: 100%;
 }
 
-.toggle-button {
+/* .toggle-button {
 	position: absolute;
 	top: 3rem;
 	right: 3rem;
@@ -114,6 +118,44 @@ header {
 	width: 100%;
 	background-color: white;
 	border-radius: 10px;
+} */
+
+.hamburger {
+    display: block;
+    width: 35px;
+    cursor: pointer;
+	position: relative;
+	right: 2rem;
+
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.hamburger .bar, 
+.hamburger:after, 
+.hamburger:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #FFF;
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 5px;
+}
+
+.hamburger.is-active:before {
+    transform: translate(0px,10px) rotate(-45deg) ;
+}
+
+.hamburger.is-active:after {
+    transform: translate(0px,-11px) rotate(45deg) ;
+}
+
+.hamburger.is-active .bar {
+    opacity: 0;
 }
 
 .navbar-links li {
@@ -153,6 +195,14 @@ header {
     font-size: 50px;
     font-family: sans-serif, poppins;
     text-transform: uppercase;
+    color: #fff;
+}
+
+.banner-area h2:last-child {
+    padding: 5%;
+    font-size: 40px;
+    font-family: sans-serif, poppins;
+    text-transform: none;
     color: #fff;
 }
 
@@ -300,9 +350,9 @@ footer {
 
 @media (max-width: 800px) {
 
-	.toggle-button {
+	/* .toggle-button {
 		display: flex;
-	}
+	} */
 
 	.navbar-links {
 		display: none;

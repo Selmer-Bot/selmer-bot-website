@@ -29,9 +29,8 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="/CSS/index.css">
-
-	<!-- <script type="text/javascript" src="main.js"></script> -->
+	<link rel="stylesheet" type="text/css" href="/CSS/index.css" defer>
+	<script type="text/javascript" src="/scripts/nav.js" defer></script>
 
  	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> (no github icon so...) -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -188,17 +187,17 @@
             <div class="main-header">
                 <nav class="navigation">
                     <div class="logo">
-                        <a class="navbar-brand" href="/">
+                        <a class="navbar-brand" href="#">
                             <img src="https://github.com/ION606/selmer-bot-website/blob/main/assets/Selmer-icon.png?raw=true" alt="Selmer Icon" style="width: 50px;">
                         </a>
                         <a href="#"><h1 class="brand-name brand-name-large">Selmer Bot<h1></a>
                     </div>
                     
-                    <a href="#" class="toggle-button">
+                    <!-- <a href="#" class="toggle-button">
                         <span class="bar"></span>
                         <span class="bar"></span>
                         <span class="bar"></span>
-                    </a>
+                    </a> -->
 
                     <div class="navbar-links">
                         <ul>
@@ -217,12 +216,20 @@
                             <li>
                                 <a href="team" class="nav-link"><i class="fa-solid fa-user-gear" style="scale: 2; color: rgb(12, 216, 5);" alt="AUTHOR"></i></a>
                             </li>
+                            <li>
+                                <button onclick="logout()" id="logoutbtn" class="logoutbtn" style="display: none;"><i class="fa-solid fa-arrow-right-from-bracket" alt="Log Out"></i></button>
+                                <button onclick="window.location = getAPIRedirect()" id="loginbtn" class="loginbtn"><i class="fa-solid fa-arrow-right-from-bracket" alt="Log In"></i></button>
+                            </li>
                         </ul>
                     </div>
+
+                    <button class="hamburger is-active">
+                        <div class="bar"></div>
+                    </button>
                 </nav>
             </div>
             <div class="banner-area">
-                <h2>WELCOME TO THE SELMER BOT DASHBOARD</h2>
+                <h2>Welcome to Selmer Bot Dashboard</h2>
                 <h2>Music, Games, an Economy System, and More!</h2>
             </div>
         </header>
