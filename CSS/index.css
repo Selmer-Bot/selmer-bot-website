@@ -400,7 +400,7 @@ footer {
     }
     
     .hamburger.is-active:before {
-        transform: translate(0px,10px) rotate(-45deg) ;
+        transform: translate(0px,11px) rotate(-45deg) ;
     }
     
     .hamburger.is-active:after {
