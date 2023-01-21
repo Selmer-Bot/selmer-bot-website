@@ -374,7 +374,7 @@ app.post("/suggestion", async (req, res)=> {
 				var uid, icon;
 				if(!user) {
 					uid = `<@${discId}>`;
-					icon = 'https://github.com/ION606/selmer-bot-website/blob/main/assets/circleOutline.png?raw=true';
+					icon = 'https://github.com/Selmer-Bot/selmer-bot-website/blob/main/assets/circleOutline.png?raw=true';
 				} else {
 					uid = `${user.username}#${user.discriminator}`;
 					icon = user.displayAvatarURL();
@@ -386,7 +386,7 @@ app.post("/suggestion", async (req, res)=> {
 				embd.setColor("ORANGE")
 				.setTimestamp()
 				.setDescription(suggestion)
-				.setThumbnail('https://github.com/ION606/selmer-bot-website/blob/main/assets/suggestion.png?raw=true')
+				.setThumbnail('https://github.com/Selmer-Bot/selmer-bot-website/blob/main/assets/suggestion.png?raw=true')
 				.setFooter({ text: 'This suggestion came from the Selmer Bot Website suggestion box'});
 
 				channel.send({ embeds: [embd] })
