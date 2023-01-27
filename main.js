@@ -218,7 +218,8 @@ app.get('/getChannels', async (req, res) => {
 
 //Headers: servernumber, sessionid
 app.post('/setCurrentServer', async (req, res) => {
-	setCurrentServer().then((code) => {
+	const {servernumber, sessionid} = req.headers;
+	setCurrentServer(sessionid, servernumber).then((code) => {
 		res.sendStatus(code);
 	}).catch((err) => {
 		console.error(err);
@@ -372,7 +373,7 @@ app.post("/suggestion", async (req, res)=> {
 				var uid, icon;
 				if(!user) {
 					uid = `<@${discId}>`;
-					icon = 'https://github.com/ION606/selmer-bot-website/blob/main/assets/circleOutline.png?raw=true';
+					icon = 'https://github.com/Selmer-Bot/selmer-bot-website/blob/main/assets/circleOutline.png?raw=true';
 				} else {
 					uid = `${user.username}#${user.discriminator}`;
 					icon = user.displayAvatarURL();
@@ -384,7 +385,7 @@ app.post("/suggestion", async (req, res)=> {
 				embd.setColor("ORANGE")
 				.setTimestamp()
 				.setDescription(suggestion)
-				.setThumbnail('https://github.com/ION606/selmer-bot-website/blob/main/assets/suggestion.png?raw=true')
+				.setThumbnail('https://github.com/Selmer-Bot/selmer-bot-website/blob/main/assets/suggestion.png?raw=true')
 				.setFooter({ text: 'This suggestion came from the Selmer Bot Website suggestion box'});
 
 				channel.send({ embeds: [embd] })
@@ -590,6 +591,28 @@ app.post("/newics", async(req, res) => {
 */
 
 
+app.get("/userData", async (req, res) => {
+	connection.then((client) => {
+		const headers = req.headers;
+		const dbo = client.db();
+	});
+});
+
+
+app.get("/releases", async (req, res) => {
+	res.sendFile('releases.html', { root: 'HTML' });
+});
+
+
+app.get("/downloads/*", async (req, res) => {
+	return res.sendFile(`${req.path}`, {root: '.'});
+});
+
+
+app.get("/invite", async (req, res) => {
+	return res.redirect("https://discord.com/oauth2/authorize?client_id=944046902415093760&scope=applications.commands+bot&permissions=549755289087");
+});
+
 app.get('/', async ({ query }, response) => {
 	const { code } = query;
 
@@ -602,7 +625,7 @@ app.get('/', async ({ query }, response) => {
 					client_secret: clientSecret,
 					code,
 					grant_type: 'authorization_code',
-					redirect_uri: `https://www.selmerbot.com/`,
+					redirect_uri: `https://selmerbot.com/`,
 					scope: 'identify',
 				}),
 				headers: {

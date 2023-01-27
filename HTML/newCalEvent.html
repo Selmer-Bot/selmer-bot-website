@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcut icon" href="https://github.com/ION606/selmer-bot-website/blob/main/assets/favicon.ico?raw=true" type="image/x-icon">
+    <link rel="shortcut icon" href="https://github.com/Selmer-Bot/selmer-bot-website/blob/main/assets/favicon.ico?raw=true" type="image/x-icon">
     <script src="https://kit.fontawesome.com/728e740903.js" crossorigin="anonymous"></script>
 
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -51,7 +51,7 @@
         function getSessionData() {
             return new Promise((resolve, reject) => {
                 var xhrsess = new XMLHttpRequest();
-                xhrsess.open('post', 'https://www.selmerbot.com/getSessionInfo/', true);
+                xhrsess.open('post', 'https://selmerbot.com/getSessionInfo/', true);
                 xhrsess.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
                 xhrsess.setRequestHeader('session', window.localStorage.getItem('sessionId'));
 
@@ -118,7 +118,7 @@
 
                     //Send the data to the server
                     var xhr = new XMLHttpRequest();
-                    xhr.open('post', 'https://www.selmerbot.com/newCalEvent/', true);
+                    xhr.open('post', 'https://selmerbot.com/newCalEvent/', true);
                     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
                     xhr.setRequestHeader(`newCalEvent`, JSON.stringify(obj));
                     
