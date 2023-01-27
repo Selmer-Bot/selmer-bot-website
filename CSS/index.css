@@ -1,16 +1,221 @@
-html { width:100%; height:100%; margin:0; padding:0; }
+/* General styles for the page */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html { 
+    width:100%; 
+    height:100%; 
+    margin:0; 
+    padding:0; 
+    overflow-x: hidden;
+}
 
 body {
     background-color: rgb(41, 42, 48);
     /* background-color: rgb(1, 1, 59); */
-    width:100%; height:100%; margin:0; padding:0;
+    height:100%; margin:0; padding:0;
 }
+
+/* Better Scroll Bar */
+
+body::-webkit-scrollbar {
+    width: .7rem;
+    height: .7rem;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: rgb(50,50,50);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(60,60,60);
+    border-radius: 10px;
+}
+
+/* header portion */
+.main-header {
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100px;
+    width: 100vw;
+    z-index: 12;
+    position: fixed;
+    top: 0;
+}
+
+header {
+    text-align: center;
+}
+
+.is-scrolling {
+    visibility: hidden;
+}
+
+.brand-name {
+    /* class for band name: should be centered wherever it is */
+    text-align: center;
+    /* heading elements like h1 all have margins: let the margins be 0 */
+    margin: 0; 
+    font-size: 1em;
+    /* changing the everything tag's font set on the heading to be different  */
+    font-family: Rajdhani, sans-serif, poppins;
+    /*
+    Since heading are by default bolded, the font-weight can be changed to 
+    normalize the bolded text
+    */
+    font-weight: normal;
+    /* All band names should be white */
+    color: white;
+}
+
+
+.band-name-large {
+    font-size: 2em;
+}
+
+
+.logo {
+    width: 50%;
+    float: left;
+    line-height: 100px;
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 30px;
+    font-family: poppins, sans-serif;
+    color: #fff;
+    letter-spacing: 5px;
+}
+
+
+.navigation {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+    width: 100%;
+}
+
+/* .toggle-button {
+	position: absolute;
+	top: 3rem;
+	right: 3rem;
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 30px;
+	height: 22px;
+}
+
+.toggle-button .bar {
+	height: 3px;
+	width: 100%;
+	background-color: white;
+	border-radius: 10px;
+} */
+
+.navbar-links {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.navbar-links li {
+	list-style: none;
+}
+
+.navbar-links li a {
+	text-decoration: none;
+	color: #fff;
+	padding: 2rem;
+	display: block;
+}
+
+.navbar-links li:hover {
+	background-color: rgba(255, 255, 255, 0.5)
+}
+
+.navbar-links ul {
+	margin:0;
+	padding:0;
+	display: flex;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+.banner-area {
+    width: 100%;
+    height: 500px;
+    position: fixed;
+    top: 100px;
+    background-image: url('https://github.com/ION606/selmer-bot-website/blob/main/assets/Header%20BK.gif?raw=true');  
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.banner-area h2 {
+    padding: 5%;
+    font-size: 50px;
+    font-family: sans-serif, poppins;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.banner-area h2:last-child {
+    padding: 5%;
+    font-size: 40px;
+    font-family: sans-serif, poppins;
+    text-transform: none;
+    color: #fff;
+}
+
+.content-area {
+    padding-top: 5px;
+    width: 100vw;
+    height: auto;
+    margin-top: 100px;
+    position: relative;
+    top: 450px;
+    background-color: rgb(41, 42, 48);
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer {
+    background-color: rgb(41, 42, 48);
+}
+
+.footer-area {
+    padding-top: 30px;
+    width: 100%;
+    position: relative;
+    top: 450px;
+    background-color: rgb(41, 42, 48);
+}
+
+/* I have no clue */
 
 .loginbtn {
     margin-top: 14px;
     scale: 1.2;
     border-radius: 10%;
 }
+
 .loginbtn:hover {
     color: #377aea;
 }
@@ -44,22 +249,6 @@ body {
     transition-delay: 0.3s;
 }
 
-nav {
-    background-color: rgb(0, 0, 0);
-    /* color: blue; */
-    /* text-align: center; */
-}
-
-.navbar .nav-item {
-    margin-right: 25px;
-    margin-left: 25px;
-}
-
-#right {
-    float: right;
-    margin-right: 50px;
-}
-
 .logoutbtn {
     margin-top: 14px;
     scale: 1.2;
@@ -72,6 +261,7 @@ nav {
     color: red;
 }
 
+
 .desctext {
     /* float:left; */
     color: white;
@@ -83,6 +273,7 @@ nav {
     width: auto;
 }
 
+
 /*************************
     CAROUSEL
 *************************/
@@ -93,10 +284,9 @@ nav {
     margin-bottom: 100px;
     background: #faf9f9;
     border:1px solid rgb(94, 104, 104);
-    
 }
 
-.carousel-control.right,
+.carousel-control.right, 
 .carousel-control.left {
     background-image: none;
 }
@@ -124,14 +314,146 @@ nav {
     text-shadow: none;
 }
 
-.item{
+.item {
     position: relative;
 }
 
-.navbar-fixed-top {
-    position: fixed;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-    top: 0;
+
+/* FIT TO SMALLER SCREEN */
+
+@media (max-width: 800px) {
+
+	/* .toggle-button {
+		display: flex;
+	} */
+
+	.navbar-links {
+		display: none;
+	}
+
+    .brand-name {
+        /* class for band name: should be centered wherever it is */
+        text-align: center;
+        /* heading elements like h1 all have margins: let the margins be 0 */
+        margin: 0; 
+        font-size: .8em;
+        /* changing the everything tag's font set on the heading to be different  */
+        font-family: Rajdhani, sans-serif, poppins;
+        /*
+        Since heading are by default bolded, the font-weight can be changed to 
+        normalize the bolded text
+        */
+        font-weight: normal;
+        /* All band names should be white */
+        color: white;
+    }
+
+    .banner-area {
+        width: 100%;
+        height: 500px;
+        position: fixed;
+        top: 100px;
+        background-image: url('https://github.com/ION606/selmer-bot-website/blob/main/assets/Header%20BK.gif?raw=true');  
+        background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .banner-area h2 {
+        padding: 8%;
+        font-size: 40px;
+        font-family: sans-serif, poppins;
+        text-transform: uppercase;
+        color: #fff;
+        
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    .hamburger {
+        display: block;
+        width: 35px;
+        cursor: pointer;
+        position: fixed;
+        right: 2rem;
+
+        appearance: none;
+        background: none;
+        outline: none;
+        border: none;
+    }
+    
+    .hamburger .bar, 
+    .hamburger:after, 
+    .hamburger:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 5px;
+        background-color: #FFF;
+        margin: 6px 0;
+        transition: 0.4s;
+        border-radius: 5px;
+    }
+    
+    .hamburger.is-active:before {
+        transform: translate(0px,11px) rotate(-45deg) ;
+    }
+    
+    .hamburger.is-active:after {
+        transform: translate(0px,-11px) rotate(45deg) ;
+    }
+    
+    .hamburger.is-active .bar {
+        opacity: 0;
+    }
+
+    .mobile-nav {
+        display: block;
+
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100px;
+        min-height: 100vh;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding-top: 120px;
+        transition: 0.4s;
+    }
+
+    .mobile-nav.is-active {
+        right: 0;
+    }
+
+    .mobile-nav li{
+        margin: 0;
+        padding-bottom: 10px;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    .mobile-nav li a {
+        text-decoration: none;
+        color: #fff;
+        padding: 1rem;
+        display: block;
+    }
+
+    .mobile-nav li:hover {
+        background-color: rgba(255, 255, 255, 0.5)
+    }
+    
+    .mobile-nav ul {
+        margin:0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
 }
+
