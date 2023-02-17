@@ -129,7 +129,7 @@ header {
 
     .hamburger {
         display: block;
-        width: 35px;
+        width: 30px;
         cursor: pointer;
         position: fixed;
         right: 2rem;
