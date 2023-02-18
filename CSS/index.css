@@ -19,32 +19,6 @@ body {
     height:100%; margin:0; padding:0;
 }
 
-/* Better Scroll Bar */
-
-body::-webkit-scrollbar {
-    width: .7rem;
-    height: .7rem;
-}
-
-body::-webkit-scrollbar-track {
-    background-color: rgb(50,50,50);
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: rgb(60,60,60);
-    border-radius: 10px;
-}
-
-
-
-
-
-
-
-
-
-
-
 /* .toggle-button {
 	position: absolute;
 	top: 3rem;
@@ -92,7 +66,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .content-area {
-    padding-top: 5px;
+    padding-top: 100px;
     width: 100vw;
     height: auto;
     margin-top: 100px;
@@ -104,9 +78,42 @@ body::-webkit-scrollbar-thumb {
 .content-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* background-color: red; */
+}
+
+
+/* MUSIC SECTION */
+.music-container {
+
+    /* background-color: red; */
+
+    display: flex;
     justify-content: space-around;
     align-items: center;
+
+    min-width: 80%;
 }
+
+.music-item {
+    /* background-color: pink; */
+    color: #fff;
+}
+
+.music-image{
+    
+}
+
+.music-desc-container{
+    height: 100%;
+    background-color: rgba(0, 0, 255, 0.25);
+    padding: 10%;
+    border-radius: 10%;
+}
+
+
 
 footer {
     background-color: rgb(41, 42, 48);
@@ -121,7 +128,6 @@ footer {
 }
 
 /* I have no clue */
-
 .loginbtn {
     margin-top: 14px;
     scale: 1.2;
