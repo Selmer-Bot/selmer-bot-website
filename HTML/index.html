@@ -30,7 +30,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="/CSS/index.css" defer>
-    <link rel="stylesheet" type="text/css" href="/CSS/header.css" defer>
+    <link rel="stylesheet" type="text/css" href="/CSS/margins.css" defer>
 	<script type="text/javascript" src="/scripts/nav.js" defer></script>
 
  	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> (no github icon so...) -->
@@ -314,29 +314,30 @@
                 </div>
 
 
-                <div id="anime" class="mx-auto container pt-lg-5 mt-lg-5 mt-sm-0 pt-sm-0">
-                    <div id="features" class="row">
-                        <div class="col-xxl-4 col-xl-5 col-lg-12 col-md-12 order-xl-first order-lg-last p-lg-0 pt-lg-4">
-                            <div class="container desctext"  style="width: 440px; background-color: rgba(77, 206, 3, 0.322); height: 300px;">
-                                <p style="white-space: pre-line;">
-                                    Get details about your favorite Anime and Manga!
-                                </p>
+                <div id="anime" class="anime-container">
 
-                                <b>Features: </b>
-                                <ul>
-                                    <li>
-                                        Three different styles: <b>Fancy, Summary, and Stats</b>
-                                    </li>
-                                    <li>
-                                        Get info on the newsest releases
-                                    </li>
-                                </ul>
-                                <p>
-                                    <i>I've actually mispelled anime/manga names several times and found some amazing new mangas</i>
-                                </p>
-                            </div>
+                    <div class="anime-item">
+                        <div class="container desctext"  style="width: 440px; background-color: rgba(77, 206, 3, 0.322); height: 300px;">
+                            <p style="white-space: pre-line;">
+                                Get details about your favorite Anime and Manga!
+                            </p>
+
+                            <b>Features: </b>
+                            <ul>
+                                <li>
+                                    Three different styles: <b>Fancy, Summary, and Stats</b>
+                                </li>
+                                <li>
+                                    Get info on the newsest releases
+                                </li>
+                            </ul>
+                            <p>
+                                <i>I've actually mispelled anime/manga names several times and found some amazing new mangas</i>
+                            </p>
                         </div>
+                    </div>
 
+                    <div class="anime-item">
 
                         <div id="animecarousel" class="carousel slide col-xxl-4 col-xl-4 col-lg-5 col-md-12" data-bs-ride="carousel" style="width: 650px; position: relative; margin: auto; height: 650px;">
                             <div class="carousel-inner" style="background-color: #36393f; height: 650px;">
@@ -361,7 +362,9 @@
                                 <span class="carousel-control-next-icon"></span>
                             </button>
                         </div>
+                        
                     </div>
+
                 </div>
 
 
@@ -494,17 +497,41 @@
         </section>
         
 
+        <footer class="main-footer">
 
-        <!-- <script type="module" src="./main.js", type="application/json"></script> -->
-        <footer class="footer-area">
-            <!-- Footer -->
-            <ul style="text-align: center;" class="row">
-                <li style="display: inline; vertical-align: text-top;">
-                    <a href="https://github.com/ION606/selmerBot"><i class="fa fa-github" style="font-size:72px; color: #000000;" alt="Github Repository"></i></a>
-                    <span style="margin-left: 40px;"></span>
-                    <a href="https://discord.com/oauth2/authorize?client_id=944046902415093760&scope=applications.commands+bot&permissions=549755289087"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" style="width: 72px; height: 72px; margin-bottom: 40px;" alt="Discord Invite Link"></a>
-                </li>
-            </ul>
+            <div class="main-footer-container">
+
+                <div class="logo">
+                    <a class="navbar-brand" href="https://www.selmerbot.com/">
+                        <img src="https://avatars.githubusercontent.com/u/121465559?s=200&v=4" alt="Contact Logo" style="width: 100px;">
+                    </a>
+                    <a href="https://www.selmerbot.com/"><h1 class="brand-name brand-name-large">Selmer Bot<h1></a>
+                </div>
+
+                <div>
+
+                    <h3 class="brand-name" style="font-size: 20px; font-weight: darker">Join Us!</h3>
+                    <ul class="nav footer-nav">
+    
+                        <li class="no-highlight">
+                            <a href="https://github.com/ION606/selmerBot">
+                                <i class="fa fa-github" style="font-size:50px; color: #FFFFFF;" alt="Github Repository"></i>
+                            </a>
+                        </li>
+    
+                        <li class="no-highlight">
+                            <a href="https://discord.com/oauth2/authorize?client_id=944046902415093760&scope=applications.commands+bot&permissions=549755289087">
+                                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord Invite Link">
+                            </a>
+                        </li>
+    
+                    </ul>
+                </div>
+
+            </div>
+
+            <div style="text-align: center; position: absolute; bottom: 5px; color: white;">Copyright @ION606 2022</div>
+
         </footer>
         
     </div>

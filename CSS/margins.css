@@ -46,7 +46,6 @@ header {
     line-height: 100px;
     display: flex;
     align-items: center;
-    margin-left: 5%;
 }
 
 .logo a {
@@ -115,6 +114,114 @@ body::-webkit-scrollbar-thumb {
     border-radius: 10px;
 }
 
+
+/* FOOTER STYLING */
+/* -------------------------------------------------------------------------- */
+
+.main-footer {
+    /* Anything else should be white */
+    color: white;
+    background-color: black;
+
+    /* adjust footer to the page */
+    position: relative;
+    top: 450px;
+
+    /* padding should be for top and bottom */
+    padding: 30px 0;
+    
+    display: flex;
+    justify-content: center;
+
+    width: 100vw;
+}
+
+.main-footer-container {
+
+    width: 90%;
+
+    /* flex display/flex-box is a complicated display tool*/
+    display: flex;
+
+    /* Vertically aligns everything in the flex-box */
+    align-items: center;
+    justify-content: space-between;
+
+    /* background-color: red; */
+}
+
+/* makes a flex-grows the list of */
+.main-footer-container ul {
+    /*
+    left element should be as small as possible (ul elements)  
+    1 - means grow and push everything to the right
+    */
+    flex-grow: 1;
+    /* should be toward the right end */
+    text-align: end;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+}
+
+/* footer list should have padding around*/
+.footer-nav li {
+    padding: 0 .5em;
+}
+
+/* footer navigation images ex. youtube, spotify, etc logos */
+.footer-nav img {
+    /* if images were not sized already you cn set the height and width */
+    height: 50px;
+}
+
+/* footer styles */
+
+.nav ul {
+    /* 
+    Gets rid of margin at the top because nav is first element and should
+    only be the nav with a list in it
+    */
+    margin: 0; 
+}
+
+.nav li {
+    /* the navigation list elements should be displayed in line */
+    display: inline;
+}
+
+.nav a {
+    /* 
+    navigation links should be padded (this only pads to the left and right and 
+    not the top and bottom because it is an inline element)
+    */
+    padding: .5em;
+
+    /* 
+    To add padding to the top and bottom or add heights, you have to make it a 
+    inline block because blocks are two dimensional while lines only have a 
+    width
+    */
+    display: inline-block;
+
+    color: white;
+
+    /* gets rid of the link-looking underlines */
+    text-decoration: none;
+}
+
+.no-highlight {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
 
 
