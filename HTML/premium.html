@@ -23,6 +23,9 @@
     </span>
 
     <link rel="stylesheet" type="text/css" href="/CSS/premium.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/margins.css">
+
+    <script type="text/javascript" src="/scripts/nav.js" defer></script>
 
     <script>
         window.onload = () => {
@@ -78,47 +81,83 @@
 </head>
 <body>
 
-	<!-- Nav Bar -->
-	<nav class="navbar navbar-expand-sm bg-black">
-		<div class="container-fluid">
-			<a class="navbar-brand" href="/">
-				<img src="https://github.com/Selmer-Bot/selmer-bot-website/blob/main/assets/Selmer-icon.png?raw=true" alt="Selmer Icon" style="width: 50px;">
-			</a>
-			
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a href="myGuilds" id="guildslink" class="nav-link"><i class="fa-solid fa-server" alt="Servers" style="scale: 2; color: rgb(11, 189, 189);"></i></a>
-                </li>
+    <header>
+        <div class="main-header">
+            <nav class="navigation">
+
+                <div class="logo">
+                    <a class="navbar-brand" href="https://www.selmerbot.com/">
+                        <img src="https://github.com/ION606/selmer-bot-website/blob/main/assets/Selmer-icon.png?raw=true" alt="Selmer Icon" style="width: 50px;">
+                    </a>
+                    <a href="https://www.selmerbot.com/"><h1 class="brand-name brand-name-large">Selmer Bot<h1></a>
+                </div>
                 
-                <li class="nav-item">
-                    <a href="calendar" id="callink" class="nav-link"><i class="fa-solid fa-calendar" alt="Calendar" style="scale: 2; color: lightgrey;"></i></a>
-                </li>
+                <!-- <a href="#" class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a> -->
 
-                <li class="nav-item">
-                    <a href="https://docs.selmerbot.com" target="_blank" class="nav-link"><i class="fa-solid fa-book" style="scale: 2; color: white;" alt="WIKI"></i></a>
-                </li>
-                
-                <li class="nav-item">
-                    <a href="premium" class="nav-link"><i class="fa-solid fa-crown" style="scale: 2; color: gold;" alt="PREMIUM"></i></a>
-                </li>
+                <div class="navbar-links">
+                    <ul>
+                        <li>
+                            <a href="myGuilds" id="guildslink" ><i class="fa-solid fa-server" alt="Servers" style="scale: 2; color: rgb(11, 189, 189);"></i></a>
+                        </li>
+                        <li>
+                            <a href="calendar" id="callink" ><i class="fa-solid fa-calendar" alt="Calendar" style="scale: 2; color: lightgrey;"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://docs.selmerbot.com" target="_blank" ><i class="fa-solid fa-book" style="scale: 2; color: white;" alt="WIKI"></i></a>
+                        </li>
+                        <li>
+                            <a href="premium" ><i class="fa-solid fa-crown" style="scale: 2; color: gold;" alt="PREMIUM"></i></a>
+                        </li>
+                        <li>
+                            <a href="team" ><i class="fa-solid fa-user-gear" style="scale: 2; color: rgb(12, 216, 5);" alt="AUTHOR"></i></a>
+                        </li>
+                        <li>
+                            <button class="logoutbtn" id="logoutbtn" onclick="logout()" style="display: none;"><i class="fa-solid fa-arrow-right-from-bracket" alt="Log Out"></i></button>
+                            <button class="loginbtn" id="loginbtn" onclick="window.location = getAPIRedirect()"><i class="fa-solid fa-arrow-right-from-bracket" alt="Log In"></i></button>
+                        </li>
+                    </ul>
+                </div>
 
-                <li class="nav-item">
-					<a href="team" class="nav-link"><i class="fa-solid fa-user-gear" style="scale: 2; color: rgb(12, 216, 5);" alt="AUTHOR"></i></a>
-				</li>
-            </ul>
+                <button class="hamburger">
+                    <div class="bar"></div>
+                </button>
+            </nav>
+        </div>
+    </header>
 
-			<div class="container"><h1 style="font-family: 'Rajdhani', sans-serif; text-align: left;">Selmer Bot Web Dashboard</h1></div>
-			<span class="ms-auto" style="margin-right: 1%;">
-				<button onclick="logout()" id="logoutbtn" class="logoutbtn"><i class="fa-solid fa-arrow-right-from-bracket" alt="Log Out"></i></button>
-				<button onclick="window.location = getAPIRedirect()" id="loginbtn" class="loginbtn" style="display: none;"><i class="fa-solid fa-arrow-right-from-bracket" alt="Log In"></i></button>
-			</span>
-		</div>
-	</nav>
-	<!-- NAVBAR END -->
+
+    <nav class="mobile-nav">
+        <ul>
+            <li>
+                <a href="myGuilds" id="guildslink" ><i class="fa-solid fa-server" alt="Servers" style="scale: 2; color: rgb(11, 189, 189);"></i></a>
+            </li>
+            <li>
+                <a href="calendar" id="callink" ><i class="fa-solid fa-calendar" alt="Calendar" style="scale: 2; color: lightgrey;"></i></a>
+            </li>
+            <li>
+                <a href="https://docs.selmerbot.com" target="_blank" ><i class="fa-solid fa-book" style="scale: 2; color: white;" alt="WIKI"></i></a>
+            </li>
+            <li>
+                <a href="premium" ><i class="fa-solid fa-crown" style="scale: 2; color: gold;" alt="PREMIUM"></i></a>
+            </li>
+            <li>
+                <a href="team"><i class="fa-solid fa-user-gear" style="scale: 2; color: rgb(12, 216, 5);" alt="AUTHOR"></i></a>
+            </li>
+            <li>
+                <button class="logoutbtn" id="logoutbtn" onclick="logout()" style="display: none;"><i class="fa-solid fa-arrow-right-from-bracket" alt="Log Out"></i></button>
+                <button class="loginbtn" id="loginbtn" onclick="window.location = getAPIRedirect()"><i class="fa-solid fa-arrow-right-from-bracket" alt="Log In"></i></button>
+            </li>
+        </ul>
+    </nav>
 
 
     <!-- Main Page -->
-    <div class="container">
+    <section class="content-area">
+
         <div id="titlediv" style="margin-top: 30px; margin-bottom: 150px;">
             <h1 style="font-family: 'Cinzel', serif;">SELMER BOT PREMIUM <span class="picon"><i class="fa-solid fa-crown"></i></span></h1>
             <h1 style="font-family: 'Rouge Script', cursive;">It's only logical!</h1>
@@ -264,17 +303,49 @@
             </div>
         </div>
 
-    </div>
+        <div style="text-align: center; margin-bottom: 20px;"><i>Disclaimer: Selmer Bot uses OpenAI integration for the chat AI. The conversation data is stored for the duration of the conversation to help provide context and is then deleted.</i></div>
+
+    </section>
 
     <!-- Footer -->
-    <ul style="margin-top: 150px; text-align: center;" class="row">
-        <li style="display: inline; vertical-align: text-top;">
-            <a href="https://github.com/Selmer-Bot/SelmerBot"><i class="fa fa-github" style="font-size:72px; color: #000000;" alt="Github Repository"></i></a>
-            <span style="margin-left: 40px;"></span>
-            <a href="https://discord.com/oauth2/authorize?client_id=944046902415093760&scope=applications.commands+bot&permissions=549755289087"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" style="width: 72px; height: 72px; margin-bottom: 40px;" alt="Discord Invite Link"></a>
-        </li>
-    </ul>
-    <div style="text-align: center; margin-bottom: 20px;"><i>Disclaimer: Selmer Bot uses OpenAI integration for the chat AI. The conversation data is stored for the duration of the conversation to help provide context and is then deleted.</i></div>
+
+    <footer class="sub-footer">
+
+
+        <div class="main-footer-container no-highlight">
+
+            <div class="logo">
+                <a class="navbar-brand" href="https://www.selmerbot.com/">
+                    <img src="https://avatars.githubusercontent.com/u/121465559?s=200&v=4" alt="Contact Logo" style="width: 100px;">
+                </a>
+                <a href="https://www.selmerbot.com/"><h1 class="brand-name brand-name-large">Selmer Bot<h1></a>
+            </div>
+
+            <div>
+
+                <h3 class="brand-name" style="font-size: 20px; font-weight: darker">Join Us!</h3>
+                <ul class="nav footer-nav">
+
+                    <li>
+                        <a href="https://github.com/ION606/selmerBot">
+                            <i class="fa fa-github" style="font-size:50px; color: #FFFFFF;" alt="Github Repository"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://discord.com/oauth2/authorize?client_id=944046902415093760&scope=applications.commands+bot&permissions=549755289087">
+                            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord Invite Link">
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="no-highlight" style="text-align: center; position: absolute; bottom: 5px; color: white;">Copyright @ION606 2022</div>
+
+    </footer>
     
 </body>
 </html>
