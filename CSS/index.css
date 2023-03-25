@@ -122,19 +122,6 @@ body {
     background-color: rgba(77, 206, 3, 0.322);
 }
 
-
-
-/* I have no clue */
-.loginbtn {
-    margin-top: 14px;
-    scale: 1.2;
-    border-radius: 10%;
-}
-
-.loginbtn:hover {
-    color: #377aea;
-}
-
 .tooltip {
     position: relative;
     display: inline-block;
@@ -164,17 +151,7 @@ body {
     transition-delay: 0.3s;
 }
 
-.logoutbtn {
-    margin-top: 14px;
-    scale: 1.2;
-    border-radius: 10%;
-    /* float: right; */
-}
 
-.logoutbtn:hover {
-    cursor: pointer;
-    color: red;
-}
 
 
 .desctext {

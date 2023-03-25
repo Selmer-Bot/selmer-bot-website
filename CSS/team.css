@@ -47,15 +47,6 @@ body {
     background-color: #9b9999;
 }
 
-.loginbtn {
-    margin-top: 14px;
-    scale: 1.2;
-    border-radius: 10%;
-}
-.loginbtn:hover {
-    color: #377aea;
-}
-
 .tooltip {
     position: relative;
     display: inline-block;
@@ -94,18 +85,6 @@ body {
 #right {
     float: right;
     margin-right: 50px;
-}
-
-.logoutbtn {
-    margin-top: 14px;
-    scale: 1.2;
-    border-radius: 10%;
-    /* float: right; */
-}
-
-.logoutbtn:hover {
-    cursor: pointer;
-    color: red;
 }
 
 .headerText {

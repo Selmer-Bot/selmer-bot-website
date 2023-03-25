@@ -77,26 +77,6 @@ h3 {
 
 
 /* Buttons */
-
-.logoutbtn {
-    margin-top: 14px;
-    scale: 1.2;
-    border-radius: 10%;
-}
-.logoutbtn:hover {
-    cursor: pointer;
-    color: red;
-}
-
-.loginbtn {
-    margin-top: 14px;
-    scale: 1.2;
-    border-radius: 10%;
-}
-.loginbtn:hover {
-    color: #377aea;
-}
-
 .fivedollarbtn {
     color: #00f2f2;
     font-size: 23px;
