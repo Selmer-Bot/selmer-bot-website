@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+
 /* General styles for the page */
 *{
     margin: 0px;
@@ -5,20 +9,22 @@
     box-sizing: border-box;
 }
 
-html { 
-    width:100%; 
-    height:100%; 
-    margin:0; 
-    padding:0; 
+html{
     overflow-x: hidden;
 }
 
 body {
     background-color: rgb(41, 42, 48);
     /* background-color: rgb(1, 1, 59); */
-    height:100%; margin:0; padding:0;
     background-color: rgb(38, 39, 49);
 }
+
+.wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
 
 /* .toggle-button {
 	position: absolute;
@@ -52,31 +58,36 @@ body {
 }
 
 .banner-area h2 {
+    font-family: 'Oswald', sans-serif;
     padding: 5%;
     font-size: 50px;
-    font-family: sans-serif, poppins;
     text-transform: uppercase;
     color: #fff;
+    letter-spacing: 5px;
+    text-shadow: 0 0 5px rgb(0, 0, 0);
 }
 
-.banner-area h2:last-child {
+/* .banner-area h2:last-child {
     padding: 5%;
     font-size: 40px;
     font-family: sans-serif, poppins;
     text-transform: none;
     color: #fff;
-}
+} */
 
 /* CONTENT SECTION */
 
 .content-area {
     display: flex;
     justify-content: center;
-    padding: 100px 0;
-    width: 100vw;
+    position: relative;
+    
+    min-width: 100vw;
     height: auto;
     margin-top: 100px;
-    position: relative;
+    padding: 100px 0;
+
+    
     top: 450px;
     background-color: rgb(41, 42, 48);
 }
@@ -94,13 +105,16 @@ body {
 .field-container {
 
     /* background-color: red; */
-
+    
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
 
     min-width: 90%;
+    max-width: 100%;
+
+    /* background-color: lightgreen; */
 }
 .desc-item {
     /* background-color: pink; */
@@ -120,6 +134,83 @@ body {
 }
 .anime-desc{
     background-color: rgba(77, 206, 3, 0.322);
+}
+.games-desc{
+    background-color: rgba(243, 3, 3, 0.322);
+}
+
+.computer{
+    height: 400px;  
+    width: 500px;
+    /* background-color: orange; */
+}
+
+.computer img{
+    position: absolute;
+    scale: 1;
+    overflow: auto;
+}
+
+/*************************
+    CAROUSEL
+*************************/
+
+#animecarousel{
+    width: 600px; 
+    position: relative;  
+    height: auto;
+    margin: 10px;
+}
+
+#gamescarousel {
+    margin: 30px 0 0 33px;
+    display: inline-block;
+
+    width: 420px;
+    height: 225px;
+    /* background-color: red; */
+}
+
+#shopcarousel{
+    width: 500px; 
+    height: 300px;
+}
+
+.carousel .carousel-inner {
+    background: #faf9f9;
+    border:1px solid rgb(94, 104, 104);
+}
+
+.carousel-control.right, 
+.carousel-control.left {
+    background-image: none;
+}
+
+.control-icon {
+    color: #393939;
+    text-shadow: none;
+}
+
+.carousel-inner {
+    position: relative;
+    height: 300px;
+}
+
+.carousel-img {
+    /* width: 200px;
+    height: 400px; */
+    background-size: cover;
+    position: relative;
+    /* top: 50px; */
+    transform: translateY(5%);
+}
+
+.cat-title {
+    text-shadow: none;
+}
+
+.item {
+    position: relative;
 }
 
 .tooltip {
@@ -166,49 +257,6 @@ body {
 }
 
 
-/*************************
-    CAROUSEL
-*************************/
-
-.carousel .carousel-inner {
-    height: 550px;
-    margin-top: 20px;
-    margin-bottom: 100px;
-    background: #faf9f9;
-    border:1px solid rgb(94, 104, 104);
-}
-
-.carousel-control.right, 
-.carousel-control.left {
-    background-image: none;
-}
-
-.control-icon {
-    color: #393939;
-    text-shadow: none;
-}
-
-.carousel-inner {
-    position: relative;
-    height: 300px;
-}
-
-.carousel-img {
-    /* width: 200px;
-    height: 400px; */
-    background-size: cover;
-    position: relative;
-    /* top: 50px; */
-    transform: translateY(5%);
-}
-
-.cat-title {
-    text-shadow: none;
-}
-
-.item {
-    position: relative;
-}
 
 
 /* FIT TO SMALLER SCREEN */
@@ -233,12 +281,48 @@ body {
     .banner-area h2 {
         padding: 8%;
         font-size: 40px;
-        font-family: sans-serif, poppins;
+        font-family: 'Oswald', sans-serif;
+        letter-spacing: 5px;
         text-transform: uppercase;
         color: #fff;
-        
-        justify-content: space-between;
-        align-content: center;
+        text-shadow: 0 0 5px rgb(0, 0, 0);
+    }
+
+
+    .computer{
+        height: 350px;  
+        width: 350px;
+        /* background-color: orange; */
+    }
+
+    .computer img{
+        position: absolute;
+        left: 0;
+        scale: .7;
+        /* background-color: #fff; */
+    }
+
+    #gamescarousel {
+        position: absolute;
+        left: 64px;
+        bottom: 650px;
+
+        width: 293px;
+        height: 155px;
+        /* background-color: green; */
+    }
+
+    #animecarousel{
+        padding: 10px;
+        width: 400px; 
+        height: auto;
+        position: relative; 
+        margin: auto; 
+    }
+
+    #shopcarousel{
+        width: 350px; 
+        height: 300px;
     }
 
 }
