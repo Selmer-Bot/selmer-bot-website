@@ -15,7 +15,7 @@ html{
 
 body {
     background-color: rgb(41, 42, 48);
-    /* background-color: rgb(1, 1, 59); */
+    background-color: rgb(1, 1, 59);
     background-color: rgb(38, 39, 49);
 }
 
@@ -23,8 +23,80 @@ body {
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
+    perspective: 10px;
+    background-color: red;
 }
 
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+    transform-style: preserve-3d;
+    z-index: -1;
+    /* background-color: aqua; */
+}
+
+.background{
+    transform: translateZ(-10px) scale(2); 
+}
+
+.foreground{
+    transform: translateZ(-5px);
+    object-position: 0%;
+    top: 300px;
+}
+
+.background,
+.foreground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.foreground{
+    object-fit: contain;
+}
+
+header h2 {
+    font-family: 'Oswald', sans-serif;
+    padding: 5%;
+    font-size: 50px;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 5px;
+    text-shadow: 0 0 5px rgb(0, 0, 0);
+}
+
+header h2:last-child {
+    font-family: 'Oswald', sans-serif;
+    padding: 5%;
+    font-size: 40px;
+    text-transform: none;
+    color: #fff;
+    letter-spacing: 5px;
+    text-shadow: 0 0 5px rgb(0, 0, 0);
+}
+
+.content-area {
+    display: flex;
+    justify-content: center;
+    /* position: relative; */
+    
+    min-width: 100vw;
+    height: auto;
+    /* margin-top: 100px; */
+    padding: 100px 0;
+
+    
+    /* top: 450px; */
+    background-color: rgb(41, 42, 48);
+}
 
 /* .toggle-button {
 	position: absolute;
@@ -46,7 +118,7 @@ body {
 
 /* HERO BANNER */
 
-.banner-area {
+/* .banner-area {
     width: 100%;
     height: 500px;
     position: fixed;
@@ -54,10 +126,10 @@ body {
     background-image: url('https://github.com/ION606/selmer-bot-website/blob/main/assets/Header%20BK.gif?raw=true');  
     background-size: cover; 
     background-repeat: no-repeat;
-    background-position: center center;
-}
+    background-position: center center; 
+} */
 
-.banner-area h2 {
+/* .banner-area h2 {
     font-family: 'Oswald', sans-serif;
     padding: 5%;
     font-size: 50px;
@@ -65,7 +137,7 @@ body {
     color: #fff;
     letter-spacing: 5px;
     text-shadow: 0 0 5px rgb(0, 0, 0);
-}
+} */
 
 /* .banner-area h2:last-child {
     padding: 5%;
@@ -75,22 +147,9 @@ body {
     color: #fff;
 } */
 
+
+
 /* CONTENT SECTION */
-
-.content-area {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    
-    min-width: 100vw;
-    height: auto;
-    margin-top: 100px;
-    padding: 100px 0;
-
-    
-    top: 450px;
-    background-color: rgb(41, 42, 48);
-}
 
 .content-container {
     display: flex;
@@ -145,7 +204,7 @@ body {
     /* background-color: orange; */
 }
 
-.computer img{
+.computer-img{
     position: absolute;
     scale: 1;
     overflow: auto;
@@ -176,6 +235,9 @@ body {
     height: 300px;
 }
 
+
+
+
 .carousel .carousel-inner {
     background: #faf9f9;
     border:1px solid rgb(94, 104, 104);
@@ -196,13 +258,17 @@ body {
     height: 300px;
 }
 
+
+
 .carousel-img {
     /* width: 200px;
     height: 400px; */
+    /* top: 50px; */
     background-size: cover;
     position: relative;
-    /* top: 50px; */
     transform: translateY(5%);
+    /* display: visible; */
+    /* background-color: red; */
 }
 
 .cat-title {
@@ -264,7 +330,8 @@ body {
 @media (max-width: 800px) {
 
     /* HERO SECTION */
-    .banner-area {
+
+    /* .banner-area {
         width: 100%;
         height: 500px;
         position: fixed;
@@ -275,8 +342,8 @@ body {
         background-position: center center;
 
         display: flex;
-        flex-direction: column;
-    }
+        flex-direction: column; 
+    } */
 
     .banner-area h2 {
         padding: 8%;
@@ -295,17 +362,25 @@ body {
         /* background-color: orange; */
     }
 
-    .computer img{
+    .computer-img{
         position: absolute;
         left: 0;
+        top: 3100px;
         scale: .7;
         /* background-color: #fff; */
+    }
+
+    .carousel-img {
+        background-size: cover;
+        position: relative;
+        transform: translateY(5%);
     }
 
     #gamescarousel {
         position: absolute;
         left: 64px;
-        bottom: 650px;
+        top: 3146px;
+
 
         width: 293px;
         height: 155px;

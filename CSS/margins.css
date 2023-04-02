@@ -1,5 +1,8 @@
 /* header portion */
 
+header {
+    text-align: center;
+}
 
 .main-header {
     margin: 0 auto;
@@ -9,10 +12,6 @@
     z-index: 12;
     position: fixed;
     top: 0;
-}
-
-header {
-    text-align: center;
 }
 
 .is-scrolling {
@@ -138,6 +137,7 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     background-color: rgb(60,60,60);
     border-radius: 10px;
+    border: solid 1px #000000;
 }
 
 
@@ -151,7 +151,7 @@ body::-webkit-scrollbar-thumb {
 
     /* adjust footer to the page */
     position: relative;
-    top: 450px;
+    /* top: 450px; */
 
     /* padding should be for top and bottom */
     padding: 30px 0;
