@@ -183,99 +183,83 @@
 
 
 <body>
+
+    
+    <div class="main-header">
+
+
+        <nav class="navigation">
+
+            <div class="logo">
+                <a class="navbar-brand" href="https://www.selmerbot.com/">
+                    <img src="https://github.com/ION606/selmer-bot-website/blob/main/assets/Selmer-icon.png?raw=true" alt="Selmer Icon" style="width: 50px;">
+                </a>
+                <a href="https://www.selmerbot.com/"><h1 class="brand-name brand-name-large">Selmer Bot<h1></a>
+            </div>
+
+            <div class="navbar-links">
+                <ul>
+                    <li>
+                        <a href="myGuilds" id="guildslink" ><i class="fa-solid fa-server" alt="Servers" style="scale: 2; color: rgb(11, 189, 189);"></i></a>
+                    </li>
+                    <li>
+                        <a href="calendar" id="callink" ><i class="fa-solid fa-calendar" alt="Calendar" style="scale: 2; color: lightgrey;"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://docs.selmerbot.com" target="_blank" ><i class="fa-solid fa-book" style="scale: 2; color: white;" alt="WIKI"></i></a>
+                    </li>
+                    <li>
+                        <a href="premium" ><i class="fa-solid fa-crown" style="scale: 2; color: gold;" alt="PREMIUM"></i></a>
+                    </li>
+                    <li>
+                        <a href="team" ><i class="fa-solid fa-user-gear" style="scale: 2; color: rgb(12, 216, 5);" alt="AUTHOR"></i></a>
+                    </li>
+                    <li>
+                        <button class="logoutbtn" id="logoutbtn" onclick="logout()" style="display: none;"><i class="fa fa-power-off" style="scale: 2;" aria-hidden="true" alt="Log Out"></i></button>
+                        <button class="loginbtn" id="loginbtn" onclick="window.location = getAPIRedirect()"><i class="fa fa-power-off" style="scale: 2;" aria-hidden="true" alt="Log In"></i></button>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="hamburger">
+                <div class="bar"></div>
+            </button>
+        </nav>
+    </div> 
+    
+    <nav class="mobile-nav">
+        <ul>
+            <li>
+                <a href="myGuilds" id="guildslink" ><i class="fa-solid fa-server" alt="Servers" style="scale: 2; color: rgb(11, 189, 189);"></i></a>
+            </li>
+            <li>
+                <a href="calendar" id="callink" ><i class="fa-solid fa-calendar" alt="Calendar" style="scale: 2; color: lightgrey;"></i></a>
+            </li>
+            <li>
+                <a href="https://docs.selmerbot.com" target="_blank" ><i class="fa-solid fa-book" style="scale: 2; color: white;" alt="WIKI"></i></a>
+            </li>
+            <li>
+                <a href="premium" ><i class="fa-solid fa-crown" style="scale: 2; color: gold;" alt="PREMIUM"></i></a>
+            </li>
+            <li>
+                <a href="team"><i class="fa-solid fa-user-gear" style="scale: 2; color: rgb(12, 216, 5);" alt="AUTHOR"></i></a>
+            </li>
+            <li>
+                <button class="logoutbtn" id="logoutbtn" onclick="logout()" style="display: none;"><i class="fa fa-power-off" style="scale: 2;" aria-hidden="true" alt="Log Out"></i></button>
+                <button class="loginbtn" id="loginbtn" onclick="window.location = getAPIRedirect()"><i class="fa fa-power-off" style="scale: 2;" aria-hidden="true" alt="Log In"></i></button>
+            </li>
+        </ul>
+    </nav>
+
+
     <div class="wrapper">
 
-
-
         <header>
-
-
-            <!-- <div class="main-header">
-
-
-                <nav class="navigation">
-
-                    <div class="logo">
-                        <a class="navbar-brand" href="https://www.selmerbot.com/">
-                            <img src="https://github.com/ION606/selmer-bot-website/blob/main/assets/Selmer-icon.png?raw=true" alt="Selmer Icon" style="width: 50px;">
-                        </a>
-                        <a href="https://www.selmerbot.com/"><h1 class="brand-name brand-name-large">Selmer Bot<h1></a>
-                    </div>
-
-                    <div class="navbar-links">
-                        <ul>
-                            <li>
-                                <a href="myGuilds" id="guildslink" ><i class="fa-solid fa-server" alt="Servers" style="scale: 2; color: rgb(11, 189, 189);"></i></a>
-                            </li>
-                            <li>
-                                <a href="calendar" id="callink" ><i class="fa-solid fa-calendar" alt="Calendar" style="scale: 2; color: lightgrey;"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://docs.selmerbot.com" target="_blank" ><i class="fa-solid fa-book" style="scale: 2; color: white;" alt="WIKI"></i></a>
-                            </li>
-                            <li>
-                                <a href="premium" ><i class="fa-solid fa-crown" style="scale: 2; color: gold;" alt="PREMIUM"></i></a>
-                            </li>
-                            <li>
-                                <a href="team" ><i class="fa-solid fa-user-gear" style="scale: 2; color: rgb(12, 216, 5);" alt="AUTHOR"></i></a>
-                            </li>
-                            <li>
-                                <button class="logoutbtn" id="logoutbtn" onclick="logout()" style="display: none;"><i class="fa fa-power-off" style="scale: 2;" aria-hidden="true" alt="Log Out"></i></button>
-                                <button class="loginbtn" id="loginbtn" onclick="window.location = getAPIRedirect()"><i class="fa fa-power-off" style="scale: 2;" aria-hidden="true" alt="Log In"></i></button>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <button class="hamburger">
-                        <div class="bar"></div>
-                    </button>
-                </nav>
-            </div> -->
-
-            <!-- 
-            <div class="banner-area">
-                <h2>Welcome!</h2>
-                <img src="https://github.com/ION606/selmer-bot-website/blob/main/assets/Header%20BK.gif?raw=true" alt="Background">
-                <img src="/assets/Kawaii_Selmer.png" alt="Kawaii Selmer">
-                <h2>Music, Games, an Economy System, and More!</h2>
-            </div> -->
-
-            
             <img class="background" src="https://github.com/ION606/selmer-bot-website/blob/main/assets/Header%20BK.gif?raw=true" alt="Background">
             <img class="foreground" src="/assets/Kawaii_Selmer.png" alt="Kawaii Selmer">
             <h2>Welcome!</h2>
             <h2>Music, Games, an Economy System, and More!</h2>
-
         </header>
-
-
-
-        <nav class="mobile-nav">
-            <ul>
-                <li>
-                    <a href="myGuilds" id="guildslink" ><i class="fa-solid fa-server" alt="Servers" style="scale: 2; color: rgb(11, 189, 189);"></i></a>
-                </li>
-                <li>
-                    <a href="calendar" id="callink" ><i class="fa-solid fa-calendar" alt="Calendar" style="scale: 2; color: lightgrey;"></i></a>
-                </li>
-                <li>
-                    <a href="https://docs.selmerbot.com" target="_blank" ><i class="fa-solid fa-book" style="scale: 2; color: white;" alt="WIKI"></i></a>
-                </li>
-                <li>
-                    <a href="premium" ><i class="fa-solid fa-crown" style="scale: 2; color: gold;" alt="PREMIUM"></i></a>
-                </li>
-                <li>
-                    <a href="team"><i class="fa-solid fa-user-gear" style="scale: 2; color: rgb(12, 216, 5);" alt="AUTHOR"></i></a>
-                </li>
-                <li>
-                    <button class="logoutbtn" id="logoutbtn" onclick="logout()" style="display: none;"><i class="fa fa-power-off" style="scale: 2;" aria-hidden="true" alt="Log Out"></i></button>
-                    <button class="loginbtn" id="loginbtn" onclick="window.location = getAPIRedirect()"><i class="fa fa-power-off" style="scale: 2;" aria-hidden="true" alt="Log In"></i></button>
-                </li>
-            </ul>
-        </nav>
-
-
-
 
         <div class="row custom-alert" style="display: none;" id="alertrow">
             <div class="alert alert-warning alert-dismissible" id="banner" style="text-align: center" role="alert">
