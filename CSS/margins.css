@@ -1,16 +1,45 @@
-/* header portion */
+/* Better Scroll Bar */
 
-header {
-    text-align: center;
+
+.wrapper::-webkit-scrollbar {
+    width: .7rem;
+    height: .7rem;
 }
+
+.wrapper::-webkit-scrollbar-track {
+    background-color: rgb(50, 50, 50);
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+    background-color: rgb(60, 60, 60);
+    border-radius: 10px;
+    border: solid 1px #000000;
+}
+
+.body::-webkit-scrollbar {
+    width: .7rem;
+    height: .7rem;
+}
+
+.body::-webkit-scrollbar-track {
+    background-color: rgb(50, 50, 50);
+}
+
+.body::-webkit-scrollbar-thumb {
+    background-color: rgb(60, 60, 60);
+    border-radius: 10px;
+    border: solid 1px #000000;
+}
+
+/* navigation */
 
 .main-header {
     margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.7);
     height: 100px;
     width: 100vw;
-    z-index: 12;
-    position: fixed;
+    z-index: 13;
+    position: sticky;
     top: 0;
 }
 
@@ -22,7 +51,7 @@ header {
     /* class for band name: should be centered wherever it is */
     text-align: center;
     /* heading elements like h1 all have margins: let the margins be 0 */
-    margin: 0; 
+    margin: 0;
     font-size: 1em;
     /* changing the everything tag's font set on the heading to be different  */
     font-family: Rajdhani, sans-serif, poppins;
@@ -56,9 +85,9 @@ header {
 }
 
 .navigation {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     height: 100%;
 }
@@ -71,26 +100,26 @@ header {
 }
 
 .navbar-links li {
-	list-style: none;
+    list-style: none;
     margin: 0;
     height: 100%;
 }
 
 .navbar-links li a {
-	text-decoration: none;
-	color: #fff;
-	padding: 2rem;
-	display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 2rem;
+    display: block;
 }
 
 .navbar-links li:hover {
-	background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .navbar-links ul {
-	margin:0;
-	padding:0;
-	display: flex;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
 .mobile-nav {
@@ -122,25 +151,6 @@ header {
     color: lightcoral;
 }
 
-
-/* Better Scroll Bar */
-
-body::-webkit-scrollbar {
-    width: .7rem;
-    height: .7rem;
-}
-
-body::-webkit-scrollbar-track {
-    background-color: rgb(50,50,50);
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: rgb(60,60,60);
-    border-radius: 10px;
-    border: solid 1px #000000;
-}
-
-
 /* FOOTER STYLING */
 /* -------------------------------------------------------------------------- */
 
@@ -155,7 +165,7 @@ body::-webkit-scrollbar-thumb {
 
     /* padding should be for top and bottom */
     padding: 30px 0;
-    
+
     display: flex;
     justify-content: center;
 
@@ -173,7 +183,7 @@ body::-webkit-scrollbar-thumb {
 
     /* padding should be for top and bottom */
     padding: 30px 0;
-    
+
     display: flex;
     justify-content: center;
 
@@ -230,7 +240,7 @@ body::-webkit-scrollbar-thumb {
     Gets rid of margin at the top because nav is first element and should
     only be the nav with a list in it
     */
-    margin: 0; 
+    margin: 0;
 }
 
 .nav li {
@@ -272,19 +282,19 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 800px) {
 
-	/* .toggle-button {
+    /* .toggle-button {
 		display: flex;
 	} */
 
-	.navbar-links {
-		display: none;
-	}
+    .navbar-links {
+        display: none;
+    }
 
     .brand-name {
         /* class for band name: should be centered wherever it is */
         text-align: center;
         /* heading elements like h1 all have margins: let the margins be 0 */
-        margin: 0; 
+        margin: 0;
         font-size: .8em;
         /* changing the everything tag's font set on the heading to be different  */
         font-family: Rajdhani, sans-serif, poppins;
@@ -301,7 +311,7 @@ body::-webkit-scrollbar-thumb {
         display: block;
         width: 30px;
         cursor: pointer;
-        position: fixed;
+        position: sticky;
         right: 2rem;
 
         appearance: none;
@@ -309,9 +319,9 @@ body::-webkit-scrollbar-thumb {
         outline: none;
         border: none;
     }
-    
-    .hamburger .bar, 
-    .hamburger:after, 
+
+    .hamburger .bar,
+    .hamburger:after,
     .hamburger:before {
         content: '';
         display: block;
@@ -322,15 +332,15 @@ body::-webkit-scrollbar-thumb {
         transition: 0.4s;
         border-radius: 5px;
     }
-    
+
     .hamburger.is-active:before {
-        transform: translate(0px,11px) rotate(-45deg) ;
+        transform: translate(0px, 11px) rotate(-45deg);
     }
-    
+
     .hamburger.is-active:after {
-        transform: translate(0px,-11px) rotate(45deg) ;
+        transform: translate(0px, -11px) rotate(45deg);
     }
-    
+
     .hamburger.is-active .bar {
         opacity: 0;
     }
@@ -338,7 +348,7 @@ body::-webkit-scrollbar-thumb {
     .mobile-nav {
         display: block;
 
-        position: fixed;
+        position: relative;
         top: 0;
         right: -100%;
         width: 100px;
@@ -350,10 +360,10 @@ body::-webkit-scrollbar-thumb {
     }
 
     .mobile-nav.is-active {
-        right: 0;
+        right: -86%;
     }
 
-    .mobile-nav li{
+    .mobile-nav li {
         margin: 0;
         padding-bottom: 10px;
         list-style: none;
@@ -371,7 +381,7 @@ body::-webkit-scrollbar-thumb {
     .mobile-nav li:hover {
         background-color: rgba(255, 255, 255, 0.5)
     }
-    
+
     .mobile-nav ul {
         margin: 0;
         padding: 0;
@@ -380,4 +390,3 @@ body::-webkit-scrollbar-thumb {
     }
 
 }
-

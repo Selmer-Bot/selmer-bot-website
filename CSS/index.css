@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
 
 
@@ -9,8 +8,10 @@
     box-sizing: border-box;
 }
 
+
 html{
     overflow-x: hidden;
+    text-align: center;
 }
 
 body {
@@ -24,7 +25,10 @@ body {
     overflow-y: auto;
     overflow-x: hidden;
     perspective: 10px;
-    background-color: red;
+    background-color: rgb(41, 42, 48);
+    background-color: rgb(1, 1, 59);
+    background-color: rgb(38, 39, 49);
+    
 }
 
 header {
@@ -37,7 +41,6 @@ header {
     width: 100vw;
     transform-style: preserve-3d;
     z-index: -1;
-    /* background-color: aqua; */
 }
 
 .background{
@@ -45,9 +48,9 @@ header {
 }
 
 .foreground{
-    transform: translateZ(-5px);
+    transform: translateZ(-7px);
     object-position: 0%;
-    top: 300px;
+    top: 400px;
 }
 
 .background,
@@ -164,7 +167,6 @@ header h2:last-child {
 .field-container {
 
     /* background-color: red; */
-    
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -362,11 +364,10 @@ header h2:last-child {
         font-size: 1rem;
     }
 
-
+/* 
     .computer{
         height: 350px;  
         width: 350px;
-        /* background-color: orange; */
     }
 
     .computer-img{
@@ -374,7 +375,6 @@ header h2:last-child {
         left: 0;
         top: 3300px;
         scale: .7;
-        /* background-color: #fff; */
     }
 
     .carousel-img {
@@ -391,7 +391,26 @@ header h2:last-child {
 
         width: 293px;
         height: 155px;
-        /* background-color: green; */
+    } */
+
+    .computer{
+        height: 300px;  
+        width: 200px;
+        /* background-color: orange; */
+    }
+    
+    .computer-img{
+        position: absolute;
+        scale: 0.7;
+        overflow: auto;
+    }
+    #gamescarousel {
+        margin: 76px 0 0 95px;
+        display: inline-block;
+    
+        width: 295px;
+        height: 155px;
+        /* background-color: red; */
     }
 
     #animecarousel{
