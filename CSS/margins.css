@@ -84,6 +84,15 @@
     letter-spacing: 5px;
 }
 
+.contact-logo{
+    width: 100px;
+}
+
+#Contact-Text{
+    font-size: 20px;
+    font-weight: darker;
+}
+
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -150,6 +159,9 @@
     cursor: pointer;
     color: lightcoral;
 }
+
+
+
 
 /* FOOTER STYLING */
 /* -------------------------------------------------------------------------- */
@@ -227,11 +239,7 @@
     padding: 0 .5em;
 }
 
-/* footer navigation images ex. youtube, spotify, etc logos */
-.footer-nav img {
-    /* if images were not sized already you cn set the height and width */
-    height: 50px;
-}
+
 
 /* footer styles */
 
@@ -266,6 +274,15 @@
 
     /* gets rid of the link-looking underlines */
     text-decoration: none;
+}
+
+#GitHub-Logo{
+    font-size: 50px;
+    color: #FFFFFF
+}
+
+#Discord-Logo{
+    height: 50px;
 }
 
 
@@ -390,3 +407,128 @@
     }
 
 }
+
+
+
+@media (max-width: 600px) {
+
+    .mobile-nav.is-active {
+        right: -81%;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .mobile-nav.is-active {
+        right: -75%;
+    }
+
+    .contact-logo{
+        width: 75px;
+    }
+
+    .logo a {
+        text-decoration: none;
+        font-size: 25px;
+        font-family: poppins, sans-serif;
+        color: #fff;
+        letter-spacing: 5px;
+    }
+
+
+    .brand-name {
+        /* class for band name: should be centered wherever it is */
+        text-align: center;
+        /* heading elements like h1 all have margins: let the margins be 0 */
+        margin: 0;
+        font-size: .7em;
+        /* changing the everything tag's font set on the heading to be different  */
+        font-family: Rajdhani, sans-serif, poppins;
+        /*
+        Since heading are by default bolded, the font-weight can be changed to 
+        normalize the bolded text
+        */
+        font-weight: normal;
+        /* All band names should be white */
+        color: white;
+    }
+    
+    .band-name-large {
+        font-size: 1em;
+    }
+
+    #Contact-Text{
+        font-size: 15px;
+        font-weight: darker;
+    }
+
+    #GitHub-Logo{
+        font-size: 30px;
+        color: #FFFFFF
+    }
+    #Discord-Logo{
+        height: 30px;
+    }
+
+}
+
+
+
+@media (max-width: 300px) {
+
+    .mobile-nav.is-active {
+        right: -65%;
+    }
+
+    
+    .contact-logo{
+        width: 50px;
+    }
+
+    .logo a {
+        text-decoration: none;
+        font-size: 20px;
+        font-family: poppins, sans-serif;
+        color: #fff;
+        letter-spacing: 5px;
+    }
+
+
+    .brand-name {
+        /* class for band name: should be centered wherever it is */
+        text-align: center;
+        /* heading elements like h1 all have margins: let the margins be 0 */
+        margin: 0;
+        font-size: .7em;
+        /* changing the everything tag's font set on the heading to be different  */
+        font-family: Rajdhani, sans-serif, poppins;
+        /*
+        Since heading are by default bolded, the font-weight can be changed to 
+        normalize the bolded text
+        */
+        font-weight: normal;
+        /* All band names should be white */
+        color: white;
+    }
+    
+    .band-name-large {
+        font-size: 1em;
+    }
+
+    #Contact-Text{
+        font-size: 15px;
+        font-weight: darker;
+    }
+
+    #GitHub-Logo{
+        font-size: 30px;
+        color: #FFFFFF
+    }
+    #Discord-Logo{
+        height: 30px;
+    }
+}
+
+
