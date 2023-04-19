@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="https://github.com/Selmer-Bot/SelmerBot/blob/main/assets/selmer_coin.png?raw=true" />
     <title>Selmer Bot Web Dashboard</title>
 
     <span id="IMPORTS">
@@ -41,7 +42,7 @@
 
         function logout() {
             var xhr = new XMLHttpRequest();
-            xhr.open('post', 'https://selmerbot.com/logout/', true);
+            xhr.open('post', 'https://www.selmerbot.com/logout/', true);
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
             xhr.setRequestHeader('sessionid', window.localStorage.getItem('sessionId'));
 
@@ -53,7 +54,7 @@
             xhr.send();
         }
 
-        //Get the redirect link   <!-- NOTE: "response_type=token" ALWAYS!!! https://selmerbot.com/ -->
+        //Get the redirect link   <!-- NOTE: "response_type=token" ALWAYS!!! https://www.selmerbot.com/ -->
 		function getAPIRedirect() {
 			if (window.location.href.indexOf('localhost') != -1) {
 				return 'https://discord.com/api/oauth2/authorize?client_id=926551095352901632&redirect_uri=http%3A%2F%2Flocalhost%3A53134%2F&response_type=token&scope=identify%20guilds';
