@@ -1,32 +1,26 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-
-html { 
-    width:100%; 
-    height:100%; 
-    margin:0; 
-    padding:0; 
-    overflow-x: hidden;
-}
+html { width:100%; height:100%; margin:0; padding:0; }
 
 body {
-    /* background-color: rgb(41, 42, 48); */
-    /* background-color: rgb(1, 1, 59); */
-    height:100%; margin:0; padding:0;
+    /* background-color: rgb(4, 4, 85); */
     background-color: rgb(38, 39, 49);
+    width:100%; height:100%; margin:0; padding:0;
     color: white;
 }
-
-.content-area {
-    padding-top: 100px;
-    width: 100vw;
-    height: auto;
-    position: relative;
-    background-color: rgb(41, 42, 48); 
+.navbar .nav-item {
+    margin-right: 25px;
+    margin-left: 25px;
 }
+
+#right {
+    float: right;
+    margin-right: 50px;
+}
+
+#right {
+    float: right;
+    margin-right: 50px;
+}
+
 
 h1 {
     /* color: rgb(0, 74, 235); */
@@ -77,6 +71,26 @@ h3 {
 
 
 /* Buttons */
+
+.logoutbtn {
+    margin-top: 14px;
+    scale: 1.2;
+    border-radius: 10%;
+}
+.logoutbtn:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.loginbtn {
+    margin-top: 14px;
+    scale: 1.2;
+    border-radius: 10%;
+}
+.loginbtn:hover {
+    color: #377aea;
+}
+
 .fivedollarbtn {
     color: #00f2f2;
     font-size: 23px;
