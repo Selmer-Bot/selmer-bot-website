@@ -14,20 +14,18 @@ html{
     text-align: center;
 }
 
-body {
-    background-color: rgb(41, 42, 48);
-    background-color: rgb(1, 1, 59);
-    background-color: rgb(38, 39, 49);
+body{
+    background-color: rgb(0, 0, 0);
 }
+
+
 
 .wrapper {
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
     perspective: 10px;
-    background-color: rgb(41, 42, 48);
-    background-color: rgb(1, 1, 59);
-    background-color: rgb(38, 39, 49);
+    background-color: rgb(0, 0, 0);
 }
 
 header {
