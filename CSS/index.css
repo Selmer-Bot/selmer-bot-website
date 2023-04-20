@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+
 /* General styles for the page */
 *{
     margin: 0px;
@@ -5,101 +8,96 @@
     box-sizing: border-box;
 }
 
-html { 
-    width:100%; 
-    height:100%; 
-    margin:0; 
-    padding:0; 
+
+html{
     overflow-x: hidden;
+    text-align: center;
 }
 
 body {
     background-color: rgb(41, 42, 48);
-    /* background-color: rgb(1, 1, 59); */
-    height:100%; margin:0; padding:0;
+    background-color: rgb(1, 1, 59);
+    background-color: rgb(38, 39, 49);
 }
 
-/* Better Scroll Bar */
-
-body::-webkit-scrollbar {
-    width: .7rem;
-    height: .7rem;
-}
-
-body::-webkit-scrollbar-track {
-    background-color: rgb(50,50,50);
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: rgb(60,60,60);
-    border-radius: 10px;
-}
-
-/* header portion */
-.main-header {
-    margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.7);
-    height: 100px;
-    width: 100vw;
-    z-index: 12;
-    position: fixed;
-    top: 0;
+.wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+    background-color: rgb(41, 42, 48);
+    background-color: rgb(1, 1, 59);
+    background-color: rgb(38, 39, 49);
 }
 
 header {
-    text-align: center;
-}
-
-.is-scrolling {
-    visibility: hidden;
-}
-
-.brand-name {
-    /* class for band name: should be centered wherever it is */
-    text-align: center;
-    /* heading elements like h1 all have margins: let the margins be 0 */
-    margin: 0; 
-    font-size: 1em;
-    /* changing the everything tag's font set on the heading to be different  */
-    font-family: Rajdhani, sans-serif, poppins;
-    /*
-    Since heading are by default bolded, the font-weight can be changed to 
-    normalize the bolded text
-    */
-    font-weight: normal;
-    /* All band names should be white */
-    color: white;
-}
-
-
-.band-name-large {
-    font-size: 2em;
-}
-
-
-.logo {
-    width: 50%;
-    float: left;
-    line-height: 100px;
+    position: relative;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-left: 5%;
+    height: 100%;
+    width: 100vw;
+    transform-style: preserve-3d;
+    z-index: -1;
 }
 
-.logo a {
-    text-decoration: none;
-    font-size: 30px;
-    font-family: poppins, sans-serif;
+.background{
+    transform: translateZ(-10px) scale(2); 
+}
+
+.foreground{
+    transform: translateZ(-7px);
+    object-position: 0%;
+    top: 400px;
+}
+
+.background,
+.foreground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.foreground{
+    object-fit: contain;
+}
+
+header h2 {
+    font-family: 'Oswald', sans-serif;
+    padding: 5%;
+    font-size: 50px;
+    text-transform: uppercase;
     color: #fff;
     letter-spacing: 5px;
+    text-shadow: 0 0 5px rgb(0, 0, 0);
 }
 
+header h2:last-child {
+    font-family: 'Oswald', sans-serif;
+    padding: 5%;
+    font-size: 40px;
+    text-transform: none;
+    color: #fff;
+    letter-spacing: 5px;
+    text-shadow: 0 0 5px rgb(0, 0, 0);
+}
 
-.navigation {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-    width: 100%;
+.content-area {
+    display: flex;
+    justify-content: center;
+    /* position: relative; */
+    
+    min-width: 100vw;
+    height: auto;
+    /* margin-top: 100px; */
+    padding: 100px 0;
+
+    
+    /* top: 450px; */
+    background-color: rgb(41, 42, 48);
 }
 
 /* .toggle-button {
@@ -120,39 +118,9 @@ header {
 	border-radius: 10px;
 } */
 
-.navbar-links {
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
-}
+/* HERO BANNER */
 
-.navbar-links li {
-	list-style: none;
-}
-
-.navbar-links li a {
-	text-decoration: none;
-	color: #fff;
-	padding: 2rem;
-	display: block;
-}
-
-.navbar-links li:hover {
-	background-color: rgba(255, 255, 255, 0.5)
-}
-
-.navbar-links ul {
-	margin:0;
-	padding:0;
-	display: flex;
-}
-
-.mobile-nav {
-    display: none;
-}
-
-.banner-area {
+/* .banner-area {
     width: 100%;
     height: 500px;
     position: fixed;
@@ -160,64 +128,156 @@ header {
     background-image: url('https://github.com/ION606/selmer-bot-website/blob/main/assets/Header%20BK.gif?raw=true');  
     background-size: cover; 
     background-repeat: no-repeat;
-    background-position: center center;
-}
+    background-position: center center; 
+} */
 
-.banner-area h2 {
+/* .banner-area h2 {
+    font-family: 'Oswald', sans-serif;
     padding: 5%;
     font-size: 50px;
-    font-family: sans-serif, poppins;
     text-transform: uppercase;
     color: #fff;
-}
+    letter-spacing: 5px;
+    text-shadow: 0 0 5px rgb(0, 0, 0);
+} */
 
-.banner-area h2:last-child {
+/* .banner-area h2:last-child {
     padding: 5%;
     font-size: 40px;
     font-family: sans-serif, poppins;
     text-transform: none;
     color: #fff;
-}
+} */
 
-.content-area {
-    padding-top: 5px;
-    width: 100vw;
-    height: auto;
-    margin-top: 100px;
-    position: relative;
-    top: 450px;
-    background-color: rgb(41, 42, 48);
-}
+
+
+/* CONTENT SECTION */
 
 .content-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+}
+
+
+/* MUSIC SECTION */
+.field-container {
+
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
+
+    min-width: 90%;
+    max-width: 100%;
+
+    /* background-color: lightgreen; */
 }
-
-footer {
-    background-color: rgb(41, 42, 48);
+.desc-item {
+    /* background-color: pink; */
+    color: #fff;
+    margin: 20px;
 }
-
-.footer-area {
-    padding-top: 30px;
-    width: 100%;
-    position: relative;
-    top: 450px;
-    background-color: rgb(41, 42, 48);
-}
-
-/* I have no clue */
-
-.loginbtn {
-    margin-top: 14px;
-    scale: 1.2;
+.desc-container{
+    height: 100%;
+    padding: 10%;
     border-radius: 10%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow: 0 0 5px rgb(0, 0, 0);
+}
+.music-desc{
+    background-color: rgba(0, 0, 255, 0.25);
+}
+.shop-desc{
+    background-color: rgba(253, 208, 35, 0.5);
+}
+.anime-desc{
+    background-color: rgba(77, 206, 3, 0.322);
+}
+.games-desc{
+    background-color: rgba(243, 3, 3, 0.322);
 }
 
-.loginbtn:hover {
-    color: #377aea;
+.computer{
+    height: 400px;  
+    width: 500px;
+    /* background-color: orange; */
+}
+
+.computer-img{
+    position: absolute;
+    scale: 1;
+    overflow: auto;
+}
+
+/*************************
+    CAROUSEL
+*************************/
+
+#animecarousel{
+    width: 600px; 
+    position: relative;  
+    height: auto;
+    margin: 10px;
+}
+
+#gamescarousel {
+    margin: 30px 0 0 33px;
+    display: inline-block;
+
+    width: 420px;
+    height: 225px;
+    /* background-color: red; */
+}
+
+#shopcarousel{
+    width: 500px; 
+    height: 300px;
+}
+
+
+.carousel .carousel-inner {
+    background: #faf9f9;
+    border:1px solid rgb(94, 104, 104);
+}
+
+.carousel-control.right, 
+.carousel-control.left {
+    background-image: none;
+}
+
+.control-icon {
+    color: #393939;
+    text-shadow: none;
+}
+
+.carousel-inner {
+    position: relative;
+    height: 300px;
+}
+
+
+
+.carousel-img {
+    /* width: 200px;
+    height: 400px; */
+    /* top: 50px; */
+    background-size: cover;
+    position: relative;
+    transform: translateY(5%);
+    /* display: visible; */
+    /* background-color: red; */
+}
+
+.cat-title {
+    text-shadow: none;
+}
+
+.item {
+    position: relative;
 }
 
 .tooltip {
@@ -249,17 +309,7 @@ footer {
     transition-delay: 0.3s;
 }
 
-.logoutbtn {
-    margin-top: 14px;
-    scale: 1.2;
-    border-radius: 10%;
-    /* float: right; */
-}
 
-.logoutbtn:hover {
-    cursor: pointer;
-    color: red;
-}
 
 
 .desctext {
@@ -274,81 +324,36 @@ footer {
 }
 
 
-/*************************
-    CAROUSEL
-*************************/
 
-.carousel .carousel-inner {
-    height: 550px;
-    margin-top: 20px;
-    margin-bottom: 100px;
-    background: #faf9f9;
-    border:1px solid rgb(94, 104, 104);
-}
 
-.carousel-control.right, 
-.carousel-control.left {
-    background-image: none;
-}
-
-.control-icon {
-    color: #393939;
-    text-shadow: none;
-}
-
-.carousel-inner {
-    position: relative;
-    height: 300px;
-}
-
-.carousel-img {
-    /* width: 200px;
-    height: 400px; */
-    background-size: cover;
-    position: relative;
-    /* top: 50px; */
-    transform: translateY(5%);
-}
-
-.cat-title {
-    text-shadow: none;
-}
-
-.item {
-    position: relative;
-}
 
 
 /* FIT TO SMALLER SCREEN */
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
 
-	/* .toggle-button {
-		display: flex;
-	} */
-
-	.navbar-links {
-		display: none;
-	}
-
-    .brand-name {
-        /* class for band name: should be centered wherever it is */
-        text-align: center;
-        /* heading elements like h1 all have margins: let the margins be 0 */
-        margin: 0; 
-        font-size: .8em;
-        /* changing the everything tag's font set on the heading to be different  */
-        font-family: Rajdhani, sans-serif, poppins;
-        /*
-        Since heading are by default bolded, the font-weight can be changed to 
-        normalize the bolded text
-        */
-        font-weight: normal;
-        /* All band names should be white */
-        color: white;
+    .field-container {
+        display: flex;
+        flex-direction: column;
+        min-width: 80%;
     }
 
-    .banner-area {
+    .desc-item:first-child{
+        align-self: flex-start;
+    }
+    .desc-item:last-child{
+        align-self: flex-end;
+    }
+        
+}
+
+
+
+@media (max-width: 800px) {
+
+    /* HERO SECTION */
+
+    /* .banner-area {
         width: 100%;
         height: 500px;
         position: fixed;
@@ -359,100 +364,181 @@ footer {
         background-position: center center;
 
         display: flex;
-        flex-direction: column;
-    }
+        flex-direction: column; 
+    } */
 
     .banner-area h2 {
         padding: 8%;
         font-size: 40px;
-        font-family: sans-serif, poppins;
+        font-family: 'Oswald', sans-serif;
+        letter-spacing: 5px;
         text-transform: uppercase;
         color: #fff;
-        
-        justify-content: space-between;
-        align-content: center;
+        text-shadow: 0 0 5px rgb(0, 0, 0);
     }
 
-    .hamburger {
-        display: block;
-        width: 35px;
-        cursor: pointer;
-        position: fixed;
-        right: 2rem;
+    .desc-container{
+        font-size: 1rem;
+    }
 
-        appearance: none;
-        background: none;
-        outline: none;
-        border: none;
+/* 
+    .computer{
+        height: 350px;  
+        width: 350px;
+    }
+
+    .computer-img{
+        position: absolute;
+        left: 0;
+        top: 3300px;
+        scale: .7;
+    }
+
+    .carousel-img {
+        background-size: cover;
+        position: relative;
+        transform: translateY(5%);
+    }
+
+    #gamescarousel {
+        position: absolute;
+        left: 64px;
+        top: 3346px;
+
+
+        width: 293px;
+        height: 155px;
+    } */
+
+    .computer{
+        height: 300px;  
+        width: 200px;
+        /* background-color: orange; */
     }
     
-    .hamburger .bar, 
-    .hamburger:after, 
-    .hamburger:before {
-        content: '';
-        display: block;
+    .computer-img{
+        position: absolute;
+        scale: 0.7;
+        overflow: auto;
+    }
+
+    #gamescarousel {
+        margin: 76px 0  0 96px;
+        display: inline-block;
+    
+        width: 295px;
+        height: 155px;
+        /* background-color: red; */
+    }
+
+    #animecarousel{
+        padding: 10px;
+        width: 400px; 
+        height: auto;
+        position: relative; 
+        margin: auto; 
+    }
+
+    #shopcarousel{
+        width: 350px; 
+        height: 300px;
+    }
+
+}
+
+
+@media ( max-width: 600px ) {
+
+    /* HERO SECTION */
+
+    /* .banner-area {
         width: 100%;
-        height: 5px;
-        background-color: #FFF;
-        margin: 6px 0;
-        transition: 0.4s;
-        border-radius: 5px;
-    }
-    
-    .hamburger.is-active:before {
-        transform: translate(0px,11px) rotate(-45deg) ;
-    }
-    
-    .hamburger.is-active:after {
-        transform: translate(0px,-11px) rotate(45deg) ;
-    }
-    
-    .hamburger.is-active .bar {
-        opacity: 0;
-    }
-
-    .mobile-nav {
-        display: block;
-
+        height: 500px;
         position: fixed;
-        top: 0;
-        right: -100%;
-        width: 100px;
-        min-height: 100vh;
-        z-index: 10;
-        background-color: rgba(0, 0, 0, 0.7);
-        padding-top: 120px;
-        transition: 0.4s;
-    }
+        top: 100px;
+        background-image: url('https://github.com/ION606/selmer-bot-website/blob/main/assets/Header%20BK.gif?raw=true');  
+        background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center center;
 
-    .mobile-nav.is-active {
-        right: 0;
-    }
-
-    .mobile-nav li{
-        margin: 0;
-        padding-bottom: 10px;
-        list-style: none;
         display: flex;
-        justify-content: center;
-    }
+        flex-direction: column; 
+    } */
 
-    .mobile-nav li a {
-        text-decoration: none;
+    .banner-area h2 {
+        padding: 8%;
+        font-size: 40px;
+        font-family: 'Oswald', sans-serif;
+        letter-spacing: 5px;
+        text-transform: uppercase;
         color: #fff;
-        padding: 1rem;
-        display: block;
+        text-shadow: 0 0 5px rgb(0, 0, 0);
     }
 
-    .mobile-nav li:hover {
-        background-color: rgba(255, 255, 255, 0.5)
+    .desc-container{
+        font-size: 1rem;
+    }
+
+/* 
+    .computer{
+        height: 350px;  
+        width: 350px;
+    }
+
+    .computer-img{
+        position: absolute;
+        left: 0;
+        top: 3300px;
+        scale: .7;
+    }
+
+    .carousel-img {
+        background-size: cover;
+        position: relative;
+        transform: translateY(5%);
+    }
+
+    #gamescarousel {
+        position: absolute;
+        left: 64px;
+        top: 3346px;
+
+
+        width: 293px;
+        height: 155px;
+    } */
+
+    .computer{
+        height: 300px;  
+        width: 200px;
+        /* background-color: orange; */
     }
     
-    .mobile-nav ul {
-        margin:0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
+    .computer-img{
+        position: absolute;
+        scale: 0.5;
+        overflow: show;
+    }
+    #gamescarousel {
+        margin: 106px 0  0 149px;
+        display: inline-block;
+    
+        width: 200px;
+        height: 100px;
+        /* background-color: red; */
+    }
+
+    #animecarousel{
+        padding: 10px;
+        width: 400px; 
+        height: auto;
+        position: relative; 
+        margin: auto; 
+    }
+
+    #shopcarousel{
+        width: 350px; 
+        height: 300px;
     }
 
 }

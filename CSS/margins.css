@@ -1,0 +1,557 @@
+/* Better Scroll Bar */
+.wrapper::-webkit-scrollbar {
+    width: .7rem;
+    height: .7rem;
+}
+
+.wrapper::-webkit-scrollbar-track {
+    background-color: rgb(50, 50, 50);
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+    background-color: rgb(60, 60, 60);
+    border-radius: 10px;
+    border: solid 1px #000000;
+}
+
+body::-webkit-scrollbar {
+    width: .7rem;
+    height: .7rem;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: rgb(50, 50, 50);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(60, 60, 60);
+    border-radius: 10px;
+    border: solid 1px #000000;
+}
+
+/* navigation */
+
+.main-header {
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100px; 
+    width: 100vw;
+    z-index: 13;
+    position: sticky;
+    top: 0;
+}
+
+.sub-header {
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100px; 
+    width: 100vw;
+    z-index: 13;
+    position: fixed;
+    top: 0;
+}
+
+.is-scrolling {
+    visibility: hidden;
+}
+
+.brand-name {
+    /* class for band name: should be centered wherever it is */
+    text-align: center;
+    /* heading elements like h1 all have margins: let the margins be 0 */
+    margin: 0;
+    font-size: 1em;
+    /* changing the everything tag's font set on the heading to be different  */
+    font-family: Rajdhani, sans-serif, poppins;
+    /*
+    Since heading are by default bolded, the font-weight can be changed to 
+    normalize the bolded text
+    */
+    font-weight: normal;
+    /* All band names should be white */
+    color: white;
+}
+
+.band-name-large {
+    font-size: 2em;
+}
+
+.logo {
+    width: 50%;
+    float: left;
+    line-height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 30px;
+    font-family: poppins, sans-serif;
+    color: #fff;
+    letter-spacing: 5px;
+}
+
+.contact-logo{
+    width: 100px;
+}
+
+#Contact-Text{
+    font-size: 20px;
+    font-weight: darker;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-links {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.navbar-links li {
+    list-style: none;
+    margin: 0;
+    height: 100%;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 2rem;
+    display: block;
+}
+
+.navbar-links li:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.mobile-nav {
+    display: none;
+}
+.sub-mobile-nav{
+    display: none;
+}
+
+/* I have no clue */
+.loginbtn {
+    padding: 2rem;
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+
+.loginbtn:hover {
+    cursor: pointer;
+    color: lightgrey;
+}
+
+.logoutbtn {
+    padding: 2rem;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border: none;
+}
+
+.logoutbtn:hover {
+    cursor: pointer;
+    color: lightcoral;
+}
+
+
+
+
+/* FOOTER STYLING */
+/* -------------------------------------------------------------------------- */
+
+.main-footer {
+    /* Anything else should be white */
+    color: white;
+    background-color: black;
+
+    /* adjust footer to the page */
+    position: relative;
+    /* top: 450px; */
+
+    /* padding should be for top and bottom */
+    padding: 30px 0;
+
+    display: flex;
+    justify-content: center;
+
+    width: 100vw;
+}
+
+.sub-footer {
+    /* Anything else should be white */
+    color: white;
+    background-color: black;
+
+    /* adjust footer to the page */
+    position: relative;
+    /* top: 450px; */
+
+    /* padding should be for top and bottom */
+    padding: 30px 0;
+
+    display: flex;
+    justify-content: center;
+
+    width: 100vw;
+}
+
+.main-footer-container {
+
+    width: 90%;
+
+    /* flex display/flex-box is a complicated display tool*/
+    display: flex;
+
+    /* Vertically aligns everything in the flex-box */
+    align-items: center;
+    justify-content: space-between;
+
+    /* background-color: red; */
+}
+
+/* makes a flex-grows the list of */
+.main-footer-container ul {
+    /*
+    left element should be as small as possible (ul elements)  
+    1 - means grow and push everything to the right
+    */
+    flex-grow: 1;
+    /* should be toward the right end */
+    text-align: end;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+}
+
+/* footer list should have padding around*/
+.footer-nav li {
+    padding: 0 .5em;
+}
+
+
+
+/* footer styles */
+
+.nav ul {
+    /* 
+    Gets rid of margin at the top because nav is first element and should
+    only be the nav with a list in it
+    */
+    margin: 0;
+}
+
+.nav li {
+    /* the navigation list elements should be displayed in line */
+    display: inline;
+}
+
+.nav a {
+    /* 
+    navigation links should be padded (this only pads to the left and right and 
+    not the top and bottom because it is an inline element)
+    */
+    padding: .5em;
+
+    /* 
+    To add padding to the top and bottom or add heights, you have to make it a 
+    inline block because blocks are two dimensional while lines only have a 
+    width
+    */
+    display: inline-block;
+
+    color: white;
+
+    /* gets rid of the link-looking underlines */
+    text-decoration: none;
+}
+
+#GitHub-Logo{
+    font-size: 50px;
+    color: #FFFFFF
+}
+
+#Discord-Logo{
+    height: 50px;
+}
+
+
+.no-highlight {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+
+@media (max-width: 800px) {
+
+    /* .toggle-button {
+		display: flex;
+	} */
+
+    .navbar-links {
+        display: none;
+    } 
+
+    .brand-name {
+        /* class for band name: should be centered wherever it is */
+        text-align: center;
+        /* heading elements like h1 all have margins: let the margins be 0 */
+        margin: 0;
+        font-size: .8em;
+        /* changing the everything tag's font set on the heading to be different  */
+        font-family: Rajdhani, sans-serif, poppins;
+        /*
+        Since heading are by default bolded, the font-weight can be changed to 
+        normalize the bolded text
+        */
+        font-weight: normal;
+        /* All band names should be white */
+        color: white;
+    }
+
+    .hamburger {
+        display: block;
+        width: 30px;
+        cursor: pointer;
+        position: sticky;
+        right: 2rem;
+
+        appearance: none;
+        background: none;
+        outline: none;
+        border: none;
+    }
+
+    .hamburger .bar,
+    .hamburger:after,
+    .hamburger:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 5px;
+        background-color: #FFF;
+        margin: 6px 0;
+        transition: 0.4s;
+        border-radius: 5px;
+    }
+
+    .hamburger.is-active:before {
+        transform: translate(0px, 11px) rotate(-45deg);
+    }
+
+    .hamburger.is-active:after {
+        transform: translate(0px, -11px) rotate(45deg);
+    }
+
+    .hamburger.is-active .bar {
+        opacity: 0;
+    }
+
+    .mobile-nav {
+        display: block;
+        position: relative;
+        top: 0;
+        right: -100%;
+        width: 100px;
+        min-height: 100vh;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding-top: 120px;
+        transition: 0.4s;
+    }
+
+    /* .sub-mobile-nav {
+        display: block;
+        position: relative;
+        top: 0;
+        right: -100%;
+        width: 100px;
+        min-height: 100vh;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding-top: 120px;
+        transition: 0.4s;  
+    } */
+
+    .mobile-nav.is-active {
+        right: -86%;
+    }
+
+    .mobile-nav li {
+        margin: 0;
+        padding-bottom: 10px;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    .mobile-nav li a {
+        text-decoration: none;
+        color: #fff;
+        padding: 1rem;
+        display: block;
+    }
+
+    .mobile-nav li:hover {
+        background-color: rgba(255, 255, 255, 0.5)
+    }
+
+    .mobile-nav ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+
+
+@media (max-width: 600px) {
+
+    .mobile-nav.is-active {
+        right: -81%;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .mobile-nav.is-active {
+        right: -75%;
+    }
+
+    .contact-logo{
+        width: 75px;
+    }
+
+    .logo a {
+        text-decoration: none;
+        font-size: 25px;
+        font-family: poppins, sans-serif;
+        color: #fff;
+        letter-spacing: 5px;
+    }
+
+
+    .brand-name {
+        /* class for band name: should be centered wherever it is */
+        text-align: center;
+        /* heading elements like h1 all have margins: let the margins be 0 */
+        margin: 0;
+        font-size: .7em;
+        /* changing the everything tag's font set on the heading to be different  */
+        font-family: Rajdhani, sans-serif, poppins;
+        /*
+        Since heading are by default bolded, the font-weight can be changed to 
+        normalize the bolded text
+        */
+        font-weight: normal;
+        /* All band names should be white */
+        color: white;
+    }
+    
+    .band-name-large {
+        font-size: 1em;
+    }
+
+    #Contact-Text{
+        font-size: 15px;
+        font-weight: darker;
+    }
+
+    #GitHub-Logo{
+        font-size: 30px;
+        color: #FFFFFF
+    }
+    #Discord-Logo{
+        height: 30px;
+    }
+
+}
+
+
+
+@media (max-width: 300px) {
+
+    .mobile-nav.is-active {
+        right: -65%;
+    }
+
+    
+    .contact-logo{
+        width: 50px;
+    }
+
+    .logo a {
+        text-decoration: none;
+        font-size: 20px;
+        font-family: poppins, sans-serif;
+        color: #fff;
+        letter-spacing: 5px;
+    }
+
+
+    .brand-name {
+        /* class for band name: should be centered wherever it is */
+        text-align: center;
+        /* heading elements like h1 all have margins: let the margins be 0 */
+        margin: 0;
+        font-size: .7em;
+        /* changing the everything tag's font set on the heading to be different  */
+        font-family: Rajdhani, sans-serif, poppins;
+        /*
+        Since heading are by default bolded, the font-weight can be changed to 
+        normalize the bolded text
+        */
+        font-weight: normal;
+        /* All band names should be white */
+        color: white;
+    }
+    
+    .band-name-large {
+        font-size: 1em;
+    }
+
+    #Contact-Text{
+        font-size: 15px;
+        font-weight: darker;
+    }
+
+    #GitHub-Logo{
+        font-size: 30px;
+        color: #FFFFFF
+    }
+    #Discord-Logo{
+        height: 30px;
+    }
+}
+
+
