@@ -111,7 +111,7 @@ async function setCurrentServer(sid, id) {
 
 const app = express();
 // app.use(express.json());
-app.use(express.static('/assets'));
+app.use('/assets', express.static('./assets'));
 app.use('/CSS', express.static('./CSS'));
 app.use('/scripts', express.static('./scripts'));
 app.use(bodyParser.urlencoded({ extended: true }));
