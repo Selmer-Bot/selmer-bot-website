@@ -1,3 +1,5 @@
+/* general structure */
+
 *{
     margin: 0px;
     padding: 0px;
@@ -33,77 +35,12 @@ body {
     align-items: center;
 }
 
-.main-title {
-    font-size: 70px;
-}
-.AI-title{
-    color: gold; 
-    font-size: 60px; 
-    text-align: center; 
-    font-family: Lucida Console; 
-    margin-bottom: 60px;
-}
 
-#AI1 {
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-#AI1 img {
-    flex-grow: 2;
-    border-style: groove; 
-    border-color:rgb(11, 189, 189);
-    margin: 10px;
-}
 
-h1 {
-    /* color: rgb(0, 74, 235); */
-    /* outline-style: dotted; */
-    text-align: center;
-    margin-right: 1%;
-    margin-left: 1%;
-}
 
-h2 {
-    color: rgb(255, 255, 255);
-    text-align: center;
-}
 
-p {
-    color: white;
-    margin-left: 1%;
-}
-
-h3 {
-    margin-left: 1%;
-}
-
-.desc-item {
-    margin: 10px;
-    font-family: Lucida Console;
-    max-width: 400px;
-}
-
-.desctext {
-    color: white;
-    margin-top: 20px;
-    background-color: rgb(1, 69, 196, 0.1);
-    padding: 10px;
-    border-radius: 10%;
-    border-style: groove;
-    border-color: rgb(255, 255, 255, 0.6);
-    width: auto;
-}
-
-.navbar-fixed-top {
-    position: fixed;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-    top: 0;
-}
+/* randoms */
 
 .picon {
     border-radius: 50%;
@@ -141,35 +78,135 @@ h3 {
     background-color: #30f200;
 }
 
-h1 {
-    font-family: 'Share Tech Mono', monospace;
+
+
+
+
+
+/* title/text */
+
+.main-title {
+    font-size: 70px;
 }
+
 
 #titlediv{
     margin-top: 30px;
     margin-bottom: 150px;
 }
 
+.AI-title{
+    color: gold; 
+    font-size: 60px; 
+    text-align: center; 
+    font-family: Lucida Console; 
+    margin-bottom: 60px;
+}
+
+
+h1 {
+    /* color: rgb(0, 74, 235); */
+    /* outline-style: dotted; */
+    text-align: center;
+    margin-right: 1%;
+    margin-left: 1%;
+}
+
+h2 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+p {
+    color: white;
+    margin-left: 1%;
+}
+
+h3 {
+    margin-left: 1%;
+}
+
+h1 {
+    font-family: 'Share Tech Mono', monospace;
+}
+
+
+
+
+
+
+/* description items */
+
+.desc-container {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+    background-color: bisque;
+}
+
+.desc-container img {
+    flex-grow: 2;
+    border-style: groove; 
+    margin: 10px;
+}
+
+.desc-item {
+    margin: 10px;
+    font-family: Lucida Console;
+    max-width: 400px;
+}
+
+.desctext {
+    color: white;
+    margin-top: 20px;
+    background-color: rgb(1, 69, 196, 0.1);
+    padding: 10px;
+    border-radius: 10%;
+    border-style: groove;
+    border-color: rgb(255, 255, 255, 0.6);
+    width: auto;
+}
+
+
+
+
+
+
+
 @media (max-width: 800px) {
-    #AI1 {
-        width: 90%;
-        display: flex;
+
+
+    .desc-container {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        background-color:rgb(189, 223, 0)
     }
 
-    #AI1 img {
+    .desc-container {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0px 20px 0px;
+    }
+    
+
+    .desc-container img {
         flex-grow: 1;
         border-style: groove; 
         margin: 10px;
     }
 
-    #AI1 div{
-        align-self: flex-start;
+    .image-wide{
+        max-width: 80%;
     }
-    #AI1 div:last-child{
+
+    .desc-container div{
         align-self: flex-end;
+    }
+    .desc-container div:last-child{
+        align-self: flex-start;
     }
 
     .desc-item {
@@ -183,7 +220,7 @@ h1 {
 
 @media (max-width: 450px) {
 
-    #AI1 img {
+    .desc-container img {
         max-width: 80%;
         border-style: groove; 
         border-color:rgb(11, 189, 189);
