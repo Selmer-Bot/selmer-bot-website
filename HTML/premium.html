@@ -284,25 +284,29 @@
 
         </div>
 
-        <div id="paymentbuttonQR">
+        <div style="width: 90%">
             <h2>Want to pay from your phone? Use our QR codes instead!</h2>
+        </div>
 
-            <div>
-                <button class="btn-lg btn-primary float-end" type="button" data-bs-toggle="collapse" data-bs-target="#fivedollarQR" aria-expanded="false" aria-controls="fivedollarQR">
+        <div id="paymentbuttonQR">
+
+            <div class="btnQR">
+                <button class="btn-lg btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#fivedollarQR" aria-expanded="false" aria-controls="fivedollarQR">
                     Basic Tier - $5
                 </button>
             </div>
 
-            <div>
-                <button class="btn-lg btn-primary float-start" type="button" data-bs-toggle="collapse" data-bs-target="#tendollarQR" aria-expanded="false" aria-controls="tendollarQR">
+            <div class="btnQR">
+                <button class="btn-lg btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#tendollarQR" aria-expanded="false" aria-controls="tendollarQR">
                     Special Tier - $10
                 </button>
             </div>
+
         </div>
 
         <div id="paymentQRImg">
             <div>
-                <div class="collapse multi-collapse float-end" id="fivedollarQR">
+                <div class="collapse multi-collapse float-end QR-container" id="fivedollarQR">
                     <img src="https://github.com/Selmer-Bot/selmer-bot-website/blob/main/assets/stripe_payment5.png?raw=true" style="width: 266.667px; height: 351.667px">
                 </div>
             </div>
