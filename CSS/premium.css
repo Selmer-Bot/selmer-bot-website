@@ -255,13 +255,13 @@ h1 {
 
     #remindercarousel {
         position: relative; 
-        width: 500px;
+        width: 400px;
         height: 640px;
     }
     
     .carousel-inner {
         background-color: #36393f; 
-        width: 500px;
+        width: 400px;
     }
     
 
